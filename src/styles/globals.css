@@ -355,9 +355,6 @@ summary > span {
   font-size: 16px;
   font-weight: 400;
 }
-details[open] > summary > span {
-  transform: rotate(45deg);
-}
 .copy {
   font-size: 15px;
   color: #3f4f43;
@@ -736,13 +733,12 @@ dialog > img {
   color: #3c5c39;
 }
 .disclosure-icon {
+  display: inline-block;
   font-size: 19px;
   line-height: 1;
 }
-.content-disclosure > summary > span {
-  transform: none;
-}
 .content-disclosure[open] .disclosure-icon {
+  display: inline-block;
   transform: rotate(45deg);
 }
 .when-open {
