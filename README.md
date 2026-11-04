@@ -1,20 +1,25 @@
-# Wexoraa Infotech portfolio
+# Wexoraa Infotech — Next.js portfolio
 
-Responsive, single-page portfolio built from the supplied 26-page PDF. Original logo, project screenshots, mobile application images, creative work and campaign evidence are extracted into `assets/`. Full verbatim extracted text is available in expandable sections, alongside the original downloadable PDF. The hero sculpture is generated artwork; original brand assets remain in the header and footer.
+A project-first, single-page portfolio built with Next.js App Router and React. All seven website projects render in the initial HTML, with their full original descriptions and all corresponding screenshots visible. No client-side content fetch is needed. Includes all four chat application screens, eight creative showcases, and seven campaign-result images from the supplied PDF. Images open in an accessible native dialog. The original logo and downloadable PDF are retained.
 
-## Run
+## Development
 
-Requires Python 3; no package installation or build required.
+Requires Node.js 20.9+ and npm.
 
 ```sh
-cd /workspace/wexoraaportfolio
+npm ci
 npm run dev
 ```
 
-Serves on port 3000, bound to localhost. Any static host can serve this directory. Keep `assets/document.json` accessible; run via HTTP rather than opening the HTML directly.
+## Production
 
-## Checks
+```sh
+npm run build
+npm start
+```
 
-`npm run check` checks JavaScript syntax. Browser checks verified seven projects, three travel filter results, image modal opening/closing, all seven original-document groups, no broken loaded images, no JavaScript errors and no horizontal overflow at 390px.
+The build exports the complete site to `out/`, which can be deployed to any static host. `npm start` requires Python 3 and serves `out/` on localhost port 3000. For Vercel, import this repository as a Next.js project. Source assets are served from `public/assets/` using absolute URLs.
 
-The PDF does not provide an email address or phone number, so none are invented. The collaboration section presents the founder and original portfolio. Source figures are reproduced as supplied, including the differing campaign-company counts in the original document.
+## Content
+
+`app/page.js` imports the original PDF text at build time and explicitly maps every screenshot to its correct project. `app/gallery.js` handles only the image enlargement interaction. All work remains visible with JavaScript disabled. Non-portfolio marketing sections and generated hero artwork are omitted from the page.
