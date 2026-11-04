@@ -1,0 +1,11 @@
+{
+  "name": "wexoraa-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wexoraa Infotech single-page portfolio, preserving original PDF content and imagery",
+  "scripts": {
+    "start": "python3 -m http.server 3000 --bind 127.0.0.1",
+    "dev": "python3 -m http.server 3000 --bind 127.0.0.1",
+    "check": "node --check app.js"
+  }
+}
