@@ -1,3 +1,4 @@
+import ContentDisclosure from '../ui/ContentDisclosure';
 import ContentBlocks from '../ui/ContentBlocks';
 import ImageGallery from '../ui/ImageGallery';
 import SectionHeading from '../ui/SectionHeading';
@@ -10,12 +11,9 @@ export default function CreativeWorks({ creatives }) {
         count={creatives.projects.length}
         caption="SOCIAL MEDIA & BRAND CONTENT"
       />
-      <details className="creative-introduction">
-        <summary>
-          Behind the creative work <span>+</span>
-        </summary>
+      <ContentDisclosure className="creative-introduction" label="Behind the creative work">
         <ContentBlocks blocks={creatives.introduction} />
-      </details>
+      </ContentDisclosure>
       <div className="creative-grid">
         {creatives.projects.map((project, index) => (
           <article className="creative" key={project.name}>

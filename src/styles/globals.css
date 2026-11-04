@@ -3,7 +3,7 @@
   --paper: #fafbf8;
   --surface: #f0f2ed;
   --ink: #202d27;
-  --muted: #7b837d;
+  --muted: #536157;
   --line: #e2e6df;
   --accent: #6e9849;
 }
@@ -74,7 +74,7 @@ header {
 }
 .brand small {
   display: block;
-  font-size: 7px;
+  font-size: 11px;
   letter-spacing: 4px;
   margin-top: 8px;
   font-weight: 400;
@@ -94,7 +94,7 @@ nav a:hover {
 }
 sup {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   margin-left: 5px;
   font-weight: 400;
   vertical-align: top;
@@ -103,7 +103,7 @@ sup {
   padding: 9px 16px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .pdf-link:hover {
   background: var(--surface);
@@ -122,7 +122,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: 1.8px;
   color: var(--muted);
 }
@@ -142,7 +142,7 @@ h1 {
 }
 h1 em {
   font-style: normal;
-  color: #7e9a6a;
+  color: #537842;
 }
 .intro-description {
   text-align: center;
@@ -172,8 +172,8 @@ h1 em {
   background: #3e5547;
 }
 .intro-actions > span {
-  color: #8c948b;
-  font-size: 9px;
+  color: #52604f;
+  font-size: 12px;
   letter-spacing: 0.4px;
 }
 .intro-bottom {
@@ -183,7 +183,7 @@ h1 em {
   margin-top: 45px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 
@@ -209,14 +209,14 @@ h1 em {
   margin: 0;
 }
 .section-heading > span {
-  font-size: 8px;
+  font-size: 11px;
   color: var(--muted);
   letter-spacing: 1.3px;
 }
 .tag {
   display: inline-block;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.3px;
 }
 
@@ -281,8 +281,8 @@ h1 em {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  color: #8e968d;
-  font-size: 8px;
+  color: #536157;
+  font-size: 11px;
   padding-bottom: 13px;
 }
 .project-meta > span:first-child {
@@ -345,8 +345,8 @@ summary {
   cursor: pointer;
   list-style: none;
   padding: 12px 0;
-  color: #69776b;
-  font-size: 10px;
+  color: #344b3a;
+  font-size: 12px;
 }
 summary::-webkit-details-marker {
   display: none;
@@ -359,8 +359,8 @@ details[open] > summary > span {
   transform: rotate(45deg);
 }
 .copy {
-  font-size: 12px;
-  color: #737e72;
+  font-size: 15px;
+  color: #3f4f43;
   line-height: 1.9;
   max-width: 900px;
 }
@@ -391,7 +391,7 @@ details[open] > summary > span {
   border: 1px solid var(--line);
   border-radius: 50%;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 12px;
 }
 .phone-gallery {
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -439,8 +439,8 @@ details[open] > summary > span {
   margin-bottom: 14px;
 }
 .creative-heading > span {
-  font-size: 9px;
-  color: #98a08f;
+  font-size: 12px;
+  color: #536157;
 }
 .creative-heading h3 {
   font-size: 14px;
@@ -492,18 +492,18 @@ footer {
   align-items: center;
   gap: 25px;
   padding: 35px 0;
-  font-size: 10px;
+  font-size: 12px;
 }
 footer > div {
   color: #68766b;
 }
 footer > div > span {
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
 }
 footer > a:not(.brand) {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 
@@ -550,7 +550,7 @@ dialog > img {
   }
   nav {
     gap: 18px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .pdf-link {
     display: none;
@@ -571,7 +571,7 @@ dialog > img {
     font-size: 20px;
   }
   .project-meta {
-    font-size: 7px;
+    font-size: 11px;
   }
   .phone-gallery {
     padding: 22px;
@@ -610,7 +610,7 @@ dialog > img {
   }
   nav {
     gap: 12px;
-    font-size: 9px;
+    font-size: 12px;
   }
   nav sup {
     display: none;
@@ -619,7 +619,7 @@ dialog > img {
     padding-top: 40px;
   }
   .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
     letter-spacing: 1.1px;
   }
   h1 {
@@ -633,7 +633,7 @@ dialog > img {
   .intro-bottom {
     margin-top: 32px;
     gap: 20px;
-    font-size: 8px;
+    font-size: 11px;
   }
   .intro-bottom > span {
     max-width: 155px;
@@ -653,7 +653,7 @@ dialog > img {
     font-size: 20px;
   }
   .section-heading > span {
-    font-size: 7px;
+    font-size: 11px;
     max-width: 115px;
     text-align: right;
   }
@@ -668,7 +668,7 @@ dialog > img {
     font-size: 23px;
   }
   .project-meta {
-    font-size: 8px;
+    font-size: 11px;
   }
   .zoom {
     opacity: 1;
@@ -703,5 +703,122 @@ dialog > img {
   }
   * {
     transition: none !important;
+  }
+}
+
+/* High-contrast, keyboard-accessible controls for all detailed content. */
+.content-disclosure {
+  border: 1px solid #cdd7c9;
+  border-radius: 7px;
+  background: #f2f5ee;
+  overflow: hidden;
+}
+.content-disclosure > summary {
+  gap: 12px;
+  padding: 14px;
+  font-size: 13px;
+  color: #253e2d;
+  font-weight: 500;
+}
+.content-disclosure > summary:hover {
+  background: #e6eedf;
+}
+.disclosure-label {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.disclosure-action {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+  font-size: 11px;
+  color: #3c5c39;
+}
+.disclosure-icon {
+  font-size: 19px;
+  line-height: 1;
+}
+.content-disclosure > summary > span {
+  transform: none;
+}
+.content-disclosure[open] .disclosure-icon {
+  transform: rotate(45deg);
+}
+.when-open {
+  display: none;
+}
+.content-disclosure[open] .when-open {
+  display: inline;
+}
+.content-disclosure[open] .when-closed {
+  display: none;
+}
+.disclosure-body {
+  padding: 4px 16px 12px;
+  background: #fafbf8;
+  border-top: 1px solid #d8e0d2;
+}
+.intro-description {
+  max-width: 660px;
+  margin-inline: auto;
+  font-size: 15px;
+  color: #536157;
+}
+.brand small {
+  font-size: 7px;
+}
+.campaign-details > summary {
+  flex-wrap: wrap;
+}
+.creative-introduction,
+.marketing-intro {
+  margin-top: 0;
+}
+@media (max-width: 600px) {
+  nav {
+    gap: 10px;
+    font-size: 11px;
+  }
+  .brand small {
+    font-size: 6px;
+  }
+  .section-heading > span {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+  }
+  .project-meta {
+    font-size: 11px;
+  }
+  .intro-bottom {
+    font-size: 11px;
+  }
+  .content-disclosure > summary {
+    padding: 13px 12px;
+  }
+  .disclosure-action {
+    font-size: 11px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    height: auto;
+    min-height: 94px;
+    flex-wrap: wrap;
+    padding-block: 13px;
+    gap: 13px;
+  }
+  nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 12px;
+  }
+  html {
+    scroll-padding-top: 130px;
   }
 }

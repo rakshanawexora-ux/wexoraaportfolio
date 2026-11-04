@@ -1,3 +1,4 @@
+import ContentDisclosure from '../ui/ContentDisclosure';
 import ContentBlocks from '../ui/ContentBlocks';
 import ImageGallery from '../ui/ImageGallery';
 
@@ -26,12 +27,9 @@ export default function ProjectCard({ project, number }) {
         <span>PROJECT {String(number).padStart(2, '0')}</span>
         <span>Website design & development</span>
       </div>
-      <details className="project-details">
-        <summary>
-          Project overview & features <span>+</span>
-        </summary>
+      <ContentDisclosure className="project-details" label={`${project.name} overview & features`}>
         <ContentBlocks blocks={project.content} />
-      </details>
+      </ContentDisclosure>
     </article>
   );
 }

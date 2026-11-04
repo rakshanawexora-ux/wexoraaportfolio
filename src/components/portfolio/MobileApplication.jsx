@@ -1,3 +1,4 @@
+import ContentDisclosure from '../ui/ContentDisclosure';
 import ContentBlocks from '../ui/ContentBlocks';
 import ImageGallery from '../ui/ImageGallery';
 import SectionHeading from '../ui/SectionHeading';
@@ -14,12 +15,9 @@ export default function MobileApplication({ application, number }) {
         </div>
       </div>
       <ImageGallery images={application.images} title={application.name} mobile />
-      <details className="mobile-details">
-        <summary>
-          Application overview & features <span>+</span>
-        </summary>
+      <ContentDisclosure className="mobile-details" label="Application overview & features">
         <ContentBlocks blocks={application.content} />
-      </details>
+      </ContentDisclosure>
     </section>
   );
 }
