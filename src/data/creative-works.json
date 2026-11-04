@@ -1,0 +1,66 @@
+{
+  "introduction": [
+    {
+      "type": "paragraph",
+      "text": "Social Media & Creative Works"
+    },
+    {
+      "type": "paragraph",
+      "text": "We create engaging and visually appealing social media content to help businesses build a strong online presence."
+    },
+    {
+      "type": "paragraph",
+      "text": "Our services include designing creative posters, promotional banners, and high-quality video content tailored for different platforms. We also handle complete video production, including shooting and professional editing."
+    },
+    {
+      "type": "paragraph",
+      "text": "From brand awareness to lead generation, our content is designed to attract attention, engage the audience, and deliver results."
+    },
+    {
+      "type": "paragraph",
+      "text": "All creatives are fully customized based on client requirements"
+    },
+    {
+      "type": "paragraph",
+      "text": "Here Are Our Works Take a look at some of our social media posters and video creatives designed to enhance brand presence and engagement."
+    },
+    {
+      "type": "paragraph",
+      "text": "All creatives are fully customized and designed by the Wexoraa Infotech Team."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Hita Home Décor",
+      "images": ["/images/creatives/hita-home-decor.jpeg"]
+    },
+    {
+      "name": "Covaihometech",
+      "images": ["/images/creatives/covai-home-tech.jpeg"]
+    },
+    {
+      "name": "Ayyappa Ghee",
+      "images": ["/images/creatives/ayyappa-ghee.jpeg"]
+    },
+    {
+      "name": "Intercity Riders",
+      "images": ["/images/creatives/intercity-riders.jpeg"]
+    },
+    {
+      "name": "Taerg Laundry",
+      "images": ["/images/creatives/taerg-laundry.jpeg"]
+    },
+    {
+      "name": "Kinza Organics",
+      "images": ["/images/creatives/kinza-organics.jpeg"]
+    },
+    {
+      "name": "Exploring Munnar",
+      "images": ["/images/creatives/exploring-munnar.jpeg"]
+    },
+    {
+      "name": "KR Fruits&Vegetables",
+      "images": ["/images/creatives/kr-fruits-vegetables.jpeg"]
+    }
+  ]
+}

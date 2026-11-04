@@ -1,0 +1,64 @@
+{
+  "name": "Chat Application",
+  "category": "Real-time communication",
+  "images": [
+    "/images/mobile/chat-customer-code.jpeg",
+    "/images/mobile/chat-admin.jpeg",
+    "/images/mobile/chat-user-profile.jpeg",
+    "/images/mobile/chat-contact-profile.jpeg"
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Mobile App Development"
+    },
+    {
+      "type": "paragraph",
+      "text": "We also specialize in developing high-quality mobile applications tailored to business needs. Our focus is on creating user-friendly, performance-driven, and scalable mobile apps."
+    },
+    {
+      "type": "paragraph",
+      "text": "We have successfully completed 1 mobile application and currently have 2 mobile apps under development, designed to deliver seamless user experience and real-time functionality."
+    },
+    {
+      "type": "paragraph",
+      "text": "Chat Application- Mobile App"
+    },
+    {
+      "type": "paragraph",
+      "text": "Fully customized MVP Chat Application with both Admin and User-side functionalities, ensuring a complete and fully functional system."
+    },
+    {
+      "type": "paragraph",
+      "text": "From idea to execution, we ensure every mobile app is built with precision, innovation, and aligned with the client’s goals."
+    },
+    {
+      "type": "paragraph",
+      "text": "Fully customized real-time chat application developed for secure and seamless business communication. The application enables instant messaging, group conversations, media sharing, notifications, and user management through a modern, responsive, and performance-driven mobile interface. It is designed to deliver a fast, reliable, and user-friendly communication experience."
+    },
+    {
+      "type": "paragraph",
+      "text": "Features:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Real-Time One-to-One Chat",
+        "Group Chat & Admin Management",
+        "Image, Video & Document Sharing",
+        "Push Notifications",
+        "User Authentication & Secure Login"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "User Profile Management",
+        "Active & Inactive Status",
+        "Search & Contact Management",
+        "Responsive Mobile UI/UX",
+        "Fast, Secure & Scalable Architecture"
+      ]
+    }
+  ]
+}

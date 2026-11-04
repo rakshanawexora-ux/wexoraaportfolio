@@ -5,11 +5,16 @@
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
-    "start": "python3 -m http.server 3000 --bind 127.0.0.1 --directory out"
+    "start": "node scripts/serve.mjs",
+    "format": "prettier --write src scripts next.config.mjs README.md docs",
+    "format:check": "prettier --check src scripts next.config.mjs README.md docs"
   },
   "dependencies": {
     "next": "^16.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.0"
   }
 }

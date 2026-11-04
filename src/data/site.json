@@ -1,0 +1,37 @@
+{
+  "brand": {
+    "name": "Wexoraa Infotech",
+    "logo": "/images/brand/wexoraa-logo.png",
+    "portfolioPdf": "/documents/wexoraa-portfolio.pdf"
+  },
+  "navigation": [
+    {
+      "href": "#websites",
+      "label": "Websites"
+    },
+    {
+      "href": "#mobile",
+      "label": "Mobile app"
+    },
+    {
+      "href": "#creatives",
+      "label": "Creatives"
+    },
+    {
+      "href": "#campaigns",
+      "label": "Campaigns"
+    }
+  ],
+  "hero": {
+    "eyebrow": "WEXORAA INFOTECH / SELECTED WORK",
+    "title": "Our work.",
+    "highlight": "Your next possibility.",
+    "uspLabel": "THE WEXORAA WAY",
+    "uspTitle": "Your business. One team that gets it.",
+    "uspDescription": "You bring the idea. We take the time to understand your business, then bring the design, development, and marketing together in-house. From your first website to your next stage of growth, it’s all built around what you need and the budget you have."
+  },
+  "founder": {
+    "name": "Kesavardhan.U",
+    "role": "Founder & CEO · Wexoraa Infotech"
+  }
+}
