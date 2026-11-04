@@ -81,3 +81,7 @@ npm run format:check
 ```
 
 Keep `package-lock.json` committed. Do not commit `node_modules/`, `.next/`, or `out/`.
+
+## Minimal portfolio layout
+
+Website projects use an automatically growing two-column grid (one column on mobile). Every original screenshot remains visible. Long descriptions and feature lists are available under each card's overview. The About Us and founder-note sections are removed from the page; their original text remains archived in `src/data/portfolio-notes.json` and the source PDF. To add more work, append entries to the appropriate data file; no layout changes are needed.

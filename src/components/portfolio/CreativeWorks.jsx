@@ -10,7 +10,12 @@ export default function CreativeWorks({ creatives }) {
         count={creatives.projects.length}
         caption="SOCIAL MEDIA & BRAND CONTENT"
       />
-      <ContentBlocks blocks={creatives.introduction} />
+      <details className="creative-introduction">
+        <summary>
+          Behind the creative work <span>+</span>
+        </summary>
+        <ContentBlocks blocks={creatives.introduction} />
+      </details>
       <div className="creative-grid">
         {creatives.projects.map((project, index) => (
           <article className="creative" key={project.name}>

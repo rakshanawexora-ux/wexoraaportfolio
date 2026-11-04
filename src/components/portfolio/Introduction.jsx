@@ -6,21 +6,21 @@ export default function Introduction() {
       <div className="eyebrow">
         <span /> {hero.eyebrow}
       </div>
-      <div className="intro-row">
-        <h1>
-          {hero.title}
-          <br />
-          <em>{hero.highlight}</em>
-        </h1>
-        <div className="usp">
-          <span className="tag">{hero.uspLabel}</span>
-          <h2>{hero.uspTitle}</h2>
-          <p>{hero.uspDescription}</p>
-        </div>
+      <h1>
+        {hero.title}
+        <br />
+        <em>{hero.highlight}</em>
+      </h1>
+      <p className="intro-description">{hero.description}</p>
+      <div className="intro-actions">
+        <a className="primary-link" href="#websites">
+          Explore the work <span aria-hidden="true">↗</span>
+        </a>
+        <span>Design · Development · Digital growth</span>
       </div>
       <div className="intro-bottom">
-        <span>THE PORTFOLIO</span>
-        <span>WEBSITES · APPS · CREATIVES · CAMPAIGNS ↓</span>
+        <span>{hero.uspTitle}</span>
+        <span>{hero.uspDescription}</span>
       </div>
     </section>
   );

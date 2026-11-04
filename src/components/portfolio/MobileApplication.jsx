@@ -14,10 +14,12 @@ export default function MobileApplication({ application, number }) {
         </div>
       </div>
       <ImageGallery images={application.images} title={application.name} mobile />
-      <div className="project-details">
-        <span className="detail-label">ABOUT THE APPLICATION</span>
+      <details className="mobile-details">
+        <summary>
+          Application overview & features <span>+</span>
+        </summary>
         <ContentBlocks blocks={application.content} />
-      </div>
+      </details>
     </section>
   );
 }

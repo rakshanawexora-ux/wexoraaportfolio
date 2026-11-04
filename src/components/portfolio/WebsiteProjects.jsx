@@ -7,11 +7,13 @@ export default function WebsiteProjects({ projects }) {
       <SectionHeading
         title="Website projects"
         count={projects.length}
-        caption="LIVE PROJECTS / ORIGINAL SCREENSHOTS"
+        caption="A FEW THINGS WE’VE BUILT"
       />
-      {projects.map((project, index) => (
-        <ProjectCard key={project.id} project={project} number={index + 1} />
-      ))}
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <ProjectCard key={project.id} project={project} number={index + 1} />
+        ))}
+      </div>
     </section>
   );
 }
