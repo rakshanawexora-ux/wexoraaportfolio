@@ -13,7 +13,7 @@ export default function Header({ websiteCount }) {
         ))}
       </nav>
       <a className="pdf-link" href={brand.portfolioPdf} target="_blank" rel="noreferrer">
-        Portfolio PDF ↗
+        View portfolio PDF ↗
       </a>
     </header>
   );

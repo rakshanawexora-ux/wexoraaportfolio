@@ -818,3 +818,100 @@ dialog > img {
     scroll-padding-top: 130px;
   }
 }
+
+/* Make every destination identifiable without relying on arrow icons. */
+.visit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: auto;
+  min-height: 48px;
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border: 1px solid #b5c6aa;
+  border-radius: 6px;
+  background: #eaf1e3;
+  color: #24462c;
+}
+.visit-url {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.visit-action {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.visit-action > span {
+  margin-left: 5px;
+}
+.visit:hover {
+  background: #dce9d1;
+  border-color: #849e71;
+}
+nav a {
+  color: #344d3c;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: #a2b298;
+}
+.pdf-link {
+  display: inline-flex;
+  color: #24462c;
+  background: #eaf1e3;
+  border-color: #b5c6aa;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+footer > a:not(.brand) {
+  color: #24462c;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 900px) {
+  header {
+    height: auto;
+    flex-wrap: wrap;
+    padding-block: 13px;
+    gap: 15px;
+  }
+  header nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .pdf-link {
+    display: inline-flex;
+    margin-left: auto;
+  }
+  html {
+    scroll-padding-top: 145px;
+  }
+}
+@media (max-width: 600px) {
+  .visit {
+    gap: 10px;
+    padding: 12px;
+  }
+  .visit-url {
+    font-size: 13px;
+  }
+  .visit-action {
+    font-size: 11px;
+  }
+  nav a {
+    font-size: 12px;
+  }
+  .pdf-link {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+}
