@@ -136,5 +136,101 @@
     ],
     "featuresTitle": "Key Features:",
     "features": []
+  },
+  {
+    "id": "hita-home-decor",
+    "name": "Hita Home Décor",
+    "category": "Home décor & curated gifting",
+    "websiteUrl": null,
+    "images": [],
+    "coverStyle": "warm",
+    "coverTitle": "Thoughtful Decor. Meaningful Gifts.",
+    "description": [
+      "Hita Home Décor brings heritage-inspired home accents and curated gifts into one welcoming shopping experience. The presented design pairs warm brown tones, soft neutrals, and considered product imagery to reflect the care behind the collection.",
+      "Clear product categories help visitors explore dining pieces, vases, kitchen accessories, decorative accents, organisers, and gifting options. A dedicated bulk-gifting feature introduces collections for weddings, housewarmings, corporate occasions, festivals, and celebrations.",
+      "Delivery, product quality, gifting, and support are highlighted early in the design, so visitors can understand the offering before exploring the products. The overall direction feels calm and personal, with a clear path from discovering a piece to making an enquiry."
+    ],
+    "featuresTitle": "Design highlights:",
+    "features": [
+      "Warm, heritage-inspired visual direction",
+      "Category-led browsing for home décor and accessories",
+      "Bulk gifting for personal and corporate occasions",
+      "Prominent delivery, quality, and support information",
+      "Visible product discovery, account, and contact navigation"
+    ]
+  },
+  {
+    "id": "topgrade",
+    "name": "TopGrade",
+    "category": "Education platform · Architecture case study",
+    "websiteUrl": null,
+    "images": [],
+    "coverStyle": "orange",
+    "coverTitle": "Built for the moments that matter.",
+    "description": [
+      "An education platform built for scheduling lessons, sharing coursework, and running digital tests. This case study explains how its data and submission workflows changed as exam-day demand grew."
+    ],
+    "featuresTitle": "Areas of work:",
+    "features": [],
+    "caseStudy": [
+      {
+        "title": "The situation",
+        "paragraphs": [
+          "TopGrade built an easy way to schedule lessons, share coursework and run digital tests. In the early days, one server handled the daily activity comfortably.",
+          "Then more universities joined, and use changed from steady browsing to sudden rushes: a huge number of students handing in timed exams within the same minute. The shared database jammed, grading jobs backed up, and teachers could not open student records."
+        ]
+      },
+      {
+        "title": "The real problem",
+        "heading": "One college’s exam slowing down everyone else.",
+        "paragraphs": [
+          "When one college ran a big exam, the database got so busy that it locked the shared question tables. A different college, only trying to check attendance, found its pages timing out.",
+          "The first instinct was to pay for a much bigger database. But that is an expensive patch, and it fails again when traffic doubles during final exams. The way the data was organised had to change."
+        ]
+      },
+      {
+        "title": "What we did",
+        "paragraphs": [
+          "We changed how data is stored and read, and separated receiving answers from the heavy work of marking them:"
+        ],
+        "steps": [
+          {
+            "label": "01 / ARCHITECTURE",
+            "heading": "Each college gets its own space",
+            "text": "We split the data by college, so a rush at one college can never use up the capacity or lock the tables of another."
+          },
+          {
+            "label": "02 / BACKEND",
+            "heading": "Submitting an exam is instant",
+            "text": "A submission is now saved safely in a queue straight away, so students are not kept waiting while marking happens behind the scenes."
+          },
+          {
+            "label": "03 / DATA LAYER",
+            "heading": "Popular content is saved for quick access",
+            "text": "Course outlines and question banks are kept in a fast memory store that refreshes automatically, taking a large share of the reading work off the main database."
+          },
+          {
+            "label": "04 / OPERATIONS",
+            "heading": "Live visibility on exam day",
+            "text": "We added live dashboards for queue length and database load, so each college’s IT team can see how things are going during important tests."
+          }
+        ]
+      },
+      {
+        "title": "The Result",
+        "heading": "Steady speed during busy exam sessions on a shared platform.",
+        "paragraphs": [
+          "TopGrade took on several university networks without rebuilding the platform. Busy exam periods no longer cause one college to slow down another.",
+          "Some details are generalised to respect client confidentiality. Specific figures are shared on a call."
+        ]
+      },
+      {
+        "title": "What we learned",
+        "heading": "Exam traffic arrives all at once.",
+        "paragraphs": [
+          "Most websites see traffic rise and fall gradually. Exam platforms see sudden cliffs: a few users at 9:59 and a huge crowd at 10:00. Slow automatic scaling will let students down every time. The reliable answer is to separate receiving answers from processing them, and to keep each college’s data path separate."
+        ]
+      }
+    ]
   }
 ]

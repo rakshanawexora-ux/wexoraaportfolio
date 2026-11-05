@@ -886,3 +886,89 @@ footer > a:not(.brand) {
     font-size: 12px;
   }
 }
+
+/* Longer case studies use a comfortable reading measure and clear hierarchy. */
+.case-study-section {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #d8e0d2;
+}
+.case-study h4 {
+  color: #24462c;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+.case-study h5 {
+  color: #202d27;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+.case-study p {
+  font-size: 16px;
+  line-height: 1.85;
+  max-width: 68ch;
+}
+.case-study-step {
+  margin: 20px 0;
+  padding-left: 16px;
+  border-left: 3px solid #9fb78e;
+}
+.case-study-step > span {
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  color: #3c5c39;
+  font-weight: 600;
+}
+.copy {
+  font-size: 16px;
+  line-height: 1.85;
+}
+.disclosure-body {
+  padding: 10px 20px 18px;
+}
+.project-brand-cover {
+  min-height: 250px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 6px;
+  background: #e9eee2;
+}
+.project-brand-cover > span {
+  font-size: 24px;
+  font-weight: 600;
+}
+.project-brand-cover > p {
+  font-size: clamp(25px, 3vw, 38px);
+  letter-spacing: -1px;
+  line-height: 1.2;
+  max-width: 13ch;
+  margin-bottom: 0;
+}
+.project-brand-cover.warm {
+  color: #603b1f;
+  background: #f2e8dd;
+}
+.project-brand-cover.orange {
+  color: #7b3c0b;
+  background: #fff0dc;
+}
+@media (max-width: 600px) {
+  .disclosure-body {
+    padding-inline: 14px;
+  }
+  .project-brand-cover {
+    min-height: 220px;
+    padding: 25px;
+  }
+  .content-disclosure > summary {
+    flex-wrap: wrap;
+  }
+  .disclosure-label {
+    font-size: 14px;
+  }
+}

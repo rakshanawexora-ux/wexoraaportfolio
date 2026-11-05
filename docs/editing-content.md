@@ -50,3 +50,11 @@ Inspect the card on desktop and mobile. Open details, enlarge images, and confir
 | Design                               | `src/styles/globals.css`       |
 
 Mobile, creative, and campaign content uses paragraph/list blocks rendered by `ContentBlocks.jsx`. Website projects use plain description and feature arrays to keep adding projects straightforward. Original PDF material is preserved in `docs/archive/`; it is not served by the website or read by page components.
+
+## Projects without a confirmed link or screenshot
+
+Use `"websiteUrl": null` until the client supplies a confirmed URL. The card will not display a guessed or broken link. For a temporary typographic cover, use `"images": []`, add a `coverTitle`, and optionally set `coverStyle` to `warm` or `orange`. Add the actual screenshot paths to `images` when the files are available.
+
+## Long-form case studies
+
+A project can include a `caseStudy` array. Each section has a `title`, optional `heading`, and `paragraphs`. A solution section can also have `steps` with `label`, `heading`, and `text`. See TopGrade in `src/data/projects.json` for a complete example. Case studies remain inside the same click-to-open details panel.

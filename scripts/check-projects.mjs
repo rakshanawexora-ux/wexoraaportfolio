@@ -20,11 +20,12 @@ for (const project of projects) {
       errors.push(`${label}: ${field} must be a nonempty string.`);
     }
   }
-  try {
-    if (!['https:', 'http:'].includes(new URL(project.websiteUrl).protocol)) throw new Error();
-  } catch {
-    errors.push(`${label}: websiteUrl must be a complete http or https URL.`);
-  }
+  if (project.websiteUrl != null)
+    try {
+      if (!['https:', 'http:'].includes(new URL(project.websiteUrl).protocol)) throw new Error();
+    } catch {
+      errors.push(`${label}: websiteUrl must be a complete http or https URL.`);
+    }
   for (const field of ['description', 'features', 'images']) {
     if (
       !Array.isArray(project[field]) ||
@@ -33,9 +34,10 @@ for (const project of projects) {
       errors.push(`${label}: ${field} must be an array of nonempty strings.`);
     }
   }
-  if (!project.description?.length || !project.images?.length) {
-    errors.push(`${label}: add at least one description paragraph and one image.`);
-  }
+  if (!project.description?.length)
+    errors.push(`${label}: add at least one description paragraph.`);
+  if (!project.images?.length && !project.coverTitle)
+    errors.push(`${label}: add an image or a coverTitle.`);
   if (!Array.isArray(project.images)) continue;
   for (const image of project.images) {
     if (typeof image !== 'string') continue;
