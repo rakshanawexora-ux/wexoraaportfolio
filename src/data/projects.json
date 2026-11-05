@@ -32,7 +32,9 @@
     "name": "VPS Infra Associates",
     "category": "Construction & infrastructure",
     "websiteUrl": "https://vpsinfraassociates.com/",
-    "images": ["/images/websites/vps-infra-home.jpeg"],
+    "images": [
+      "/images/websites/vps-infra-home.jpeg"
+    ],
     "description": [
       "A fully customized corporate website developed for a construction and infrastructure company, designed to showcase its services, completed projects, and business profile with a modern, professional, and responsive interface."
     ],
@@ -55,7 +57,9 @@
     "name": "Intercity Riders",
     "category": "Taxi booking platform",
     "websiteUrl": "https://intercityonewaytaxi.in/",
-    "images": ["/images/websites/intercity-riders-home.jpeg"],
+    "images": [
+      "/images/websites/intercity-riders-home.jpeg"
+    ],
     "description": [
       "A fully customized intercity taxi booking platform designed to provide seamless one-way, round-trip, and airport transfer services across Tamil Nadu. The website offers an intuitive booking experience, transparent pricing, responsive design, and quick inquiry options, ensuring a convenient and reliable travel experience for customers."
     ],
@@ -75,7 +79,9 @@
     "name": "Covai Home Tech",
     "category": "Home appliance services",
     "websiteUrl": "https://covaihometech.in/",
-    "images": ["/images/websites/covai-home-tech-home.jpeg"],
+    "images": [
+      "/images/websites/covai-home-tech-home.jpeg"
+    ],
     "description": [
       "A fully customized service-based website developed for a home appliance repair company, offering AC, washing machine, refrigerator, and TV repair services. The website provides clear service information, quick contact options, online service inquiries, and a responsive user interface to enhance customer convenience."
     ],
@@ -114,7 +120,9 @@
     "name": "Purple Drop Taxi",
     "category": "Travel & mobility",
     "websiteUrl": "https://purpledroptaxi.com/",
-    "images": ["/images/websites/purple-drop-taxi-home.jpeg"],
+    "images": [
+      "/images/websites/purple-drop-taxi-home.jpeg"
+    ],
     "description": [
       "A fully customized taxi booking website developed for Purple Drop Taxi, designed to provide a simple, reliable, and user- friendly travel booking experience across Tamil Nadu. The website allows customers to easily explore taxi services, check transparent pricing, select their preferred vehicle, and submit trip details through a convenient online booking system.",
       "The platform supports multiple travel requirements including one-way trips, round trips, airport pickup and drop, and outstation travel. It is designed with a responsive and mobile- friendly interface, clear call and WhatsApp options, and an",
@@ -128,7 +136,9 @@
     "name": "Taerg Laundry",
     "category": "Premium garment care",
     "websiteUrl": "https://taerglaundry.com/",
-    "images": ["/images/websites/taerg-laundry-home.jpeg"],
+    "images": [
+      "/images/websites/taerg-laundry-home.jpeg"
+    ],
     "description": [
       "A fully customized premium laundry service website developed for TAERG Laundry, designed to provide customers with a simple and convenient way to access professional garment care services. The website showcases TAERG’s specialized cleaning solutions for everyday clothing as well as premium garments such as silk sarees, blazers, lehengas, designer wear, uniforms, shoes, bags, and more.",
       "The website features an easy-to-use service booking system, detailed service information, pickup and delivery options, and a responsive mobile-friendly interface. It also highlights TAERG’s advanced SoftWash wet-cleaning technology, offering",
@@ -142,9 +152,9 @@
     "name": "Hita Home Décor",
     "category": "Home décor & curated gifting",
     "websiteUrl": "https://www.hitadecor.com/",
-    "images": [],
-    "coverStyle": "warm",
-    "coverTitle": "Thoughtful Decor. Meaningful Gifts.",
+    "images": [
+      "/images/websites/hita-home-decor-home.png"
+    ],
     "description": [
       "Hita Home Décor brings heritage-inspired home accents and curated gifts into one welcoming shopping experience. The presented design pairs warm brown tones, soft neutrals, and considered product imagery to reflect the care behind the collection.",
       "Clear product categories help visitors explore dining pieces, vases, kitchen accessories, decorative accents, organisers, and gifting options. A dedicated bulk-gifting feature introduces collections for weddings, housewarmings, corporate occasions, festivals, and celebrations.",
@@ -164,9 +174,9 @@
     "name": "TopGrade",
     "category": "Education platform · Architecture case study",
     "websiteUrl": "https://www.topgradeinnovation.com/",
-    "images": [],
-    "coverStyle": "orange",
-    "coverTitle": "Built for the moments that matter.",
+    "images": [
+      "/images/websites/topgrade-home.png"
+    ],
     "description": [
       "An education platform built for scheduling lessons, sharing coursework, and running digital tests. This case study explains how its data and submission workflows changed as exam-day demand grew."
     ],
@@ -238,9 +248,9 @@
     "name": "OneWay Drop Taxi",
     "category": "Taxi services · UI/UX design & development",
     "websiteUrl": "https://onewaydroptaxis.com/",
-    "images": [],
-    "coverStyle": "taxi",
-    "coverTitle": "One-way travel, your way.",
+    "images": [
+      "/images/websites/oneway-drop-taxi-home.png"
+    ],
     "description": [
       "A website for a one-way drop taxi service provider, with complete UI/UX design and development by Wexoraa Infotech.",
       "The design gives travellers a clear starting point for planning a journey, with prominent service, tariff, route, and contact information. A warm orange and dark-brown visual direction makes key actions easy to spot.",
