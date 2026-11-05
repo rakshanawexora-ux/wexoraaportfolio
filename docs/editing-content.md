@@ -1,46 +1,52 @@
-# Editing portfolio content
+# Add a project in three steps
 
-## Update a website project
+## 1. Add screenshots
 
-Open `src/data/website-projects.json`. Each project has named fields rather than positional arrays:
+Copy images into `public/images/websites/`. Use clear filenames such as `my-project-home.jpg` and `my-project-admin.jpg`.
+
+## 2. Add a project record
+
+Open `src/data/projects.json`. Copy `docs/project-template.json` and paste it as another object in the existing array. Add a comma between objects.
 
 ```json
 {
-  "id": "example-project",
-  "name": "Example Project",
-  "category": "Travel & tourism",
+  "id": "my-project",
+  "name": "My Project",
+  "category": "Business website",
   "websiteUrl": "https://example.com/",
-  "images": ["/images/websites/example-home.jpeg"],
-  "content": [
-    { "type": "paragraph", "text": "Describe the project here." },
-    { "type": "paragraph", "text": "Key Features:" },
-    { "type": "list", "items": ["Online booking", "Responsive design"] }
-  ]
+  "images": ["/images/websites/my-project-home.jpg", "/images/websites/my-project-admin.jpg"],
+  "description": ["Explain what the project does.", "Add another paragraph if needed."],
+  "featuresTitle": "Key Features:",
+  "features": ["Online booking", "Responsive design"]
 }
 ```
 
-Place the image in `public/images/websites/`. In JSON, its URL starts with `/images/`, not `/public/images/`. Order the `images` array to control screenshot order. Do not use another project's screenshots.
+- `id`: unique lowercase words separated by hyphens. It becomes the card's anchor.
+- `images`: URLs start with `/images/`, not `/public/images/`. The first image is the cover; the others appear below it.
+- `description`: one string per paragraph.
+- `features`: one string per bullet. Use `[]` for no features.
+- Array order controls project order. Counts, numbering, cards, and links update automatically.
 
-To add a project, append a new object with a unique `id`. Website counts and project numbers update automatically. Keep the existing descriptions and features faithful to the source PDF unless the client supplies updated copy.
+## 3. Validate and preview
 
-## Update the main USP
+```sh
+npm run check:projects
+npm run dev
+```
 
-Open `src/data/site.json`, then edit `hero.uspTitle` and `hero.uspDescription`. This does not require changing the page component.
+The validator reports missing images, invalid URLs, duplicate IDs, or malformed content. It also runs automatically during `npm run build`.
 
-## Update other portfolio sections
+Inspect the card on desktop and mobile. Open details, enlarge images, and confirm the website link. Then run `npm run format` and `npm run build` before committing.
 
-- `mobile-app.json`: application name, category, screens, and content.
-- `creative-works.json`: introduction and creative projects.
-- `campaigns.json`: marketing introduction and campaign results. Keep social, Meta, and Google results in their correct entries.
-- `portfolio-notes.json`: original introduction, services, closing message, and the note about inconsistent source counts.
+## Other changes
 
-Text uses `content` arrays of paragraph and list objects. `ContentBlocks.jsx` renders them without parsing text headings or searching the PDF at runtime.
+| What to edit                         | File                           |
+| ------------------------------------ | ------------------------------ |
+| Logo, navigation, hero copy, founder | `src/data/site.json`           |
+| Mobile app                           | `src/data/mobile-app.json`     |
+| Creative works                       | `src/data/creative-works.json` |
+| Campaign results                     | `src/data/campaigns.json`      |
+| Section order                        | `src/app/page.jsx`             |
+| Design                               | `src/styles/globals.css`       |
 
-## Check your changes
-
-1. Run `npm run dev` and inspect the changed section on desktop and mobile.
-2. Check every new screenshot under its correct project. Click to verify enlargement and press Escape to close.
-3. Confirm website links and the PDF download.
-4. Run `npm run format:check` and `npm run build` before committing.
-
-The PDF is in `public/documents/wexoraa-portfolio.pdf`. The archival extraction in `src/data/original-document.json` is reference material; editing it does not change the live portfolio.
+Mobile, creative, and campaign content uses paragraph/list blocks rendered by `ContentBlocks.jsx`. Website projects use plain description and feature arrays to keep adding projects straightforward. Original PDF material is preserved in `docs/archive/`; it is not served by the website or read by page components.

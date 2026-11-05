@@ -1,5 +1,5 @@
 import Brand from './Brand';
-import { brand, navigation } from '../../data/site.json';
+import { navigation } from '../../data/site.json';
 
 export default function Header({ websiteCount }) {
   return (
@@ -12,9 +12,6 @@ export default function Header({ websiteCount }) {
           </a>
         ))}
       </nav>
-      <a className="pdf-link" href={brand.portfolioPdf} target="_blank" rel="noreferrer">
-        View portfolio PDF ↗
-      </a>
     </header>
   );
 }

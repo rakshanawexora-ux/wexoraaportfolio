@@ -1,0 +1,10 @@
+{
+  "id": "new-project",
+  "name": "New Project",
+  "category": "Business website",
+  "websiteUrl": "https://example.com/",
+  "images": ["/images/websites/new-project-home.jpg"],
+  "description": ["Write the project description here."],
+  "featuresTitle": "Key Features:",
+  "features": ["Responsive design", "Online booking"]
+}

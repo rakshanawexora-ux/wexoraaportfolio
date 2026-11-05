@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1",
-    "build": "next build",
+    "build": "npm run check:projects && next build",
     "start": "node scripts/serve.mjs",
     "format": "prettier --write src scripts next.config.mjs README.md docs",
-    "format:check": "prettier --check src scripts next.config.mjs README.md docs"
+    "format:check": "prettier --check src scripts next.config.mjs README.md docs",
+    "check:projects": "node scripts/check-projects.mjs"
   },
   "dependencies": {
     "next": "^16.0.0",

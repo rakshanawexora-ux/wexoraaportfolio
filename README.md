@@ -1,87 +1,72 @@
-# Wexoraa Infotech portfolio
+# Wexoraa portfolio
 
-A Next.js App Router portfolio with seven website projects, four chat app screens, eight creative showcases, and seven campaign-result images. Project content is rendered on the server, so it stays visible without JavaScript. The image viewer is the only client component.
+Minimal Next.js portfolio. Project descriptions open on click; all original screenshots remain visible. No PDF links or About Us section.
 
-## Run locally
+## Start
 
-Install Node.js 20.9 or later. Open this repository's folder in VS Code: the correct folder contains `package.json`, `src/`, and `public/`.
+Requires Node.js 20.9+. Open the folder containing this `package.json` in VS Code.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. These commands work in Windows PowerShell, macOS, and Linux. Python is not required.
+Open http://localhost:3000. Windows, macOS, and Linux supported; no Python needed. If npm reports `ENOSPC`, free disk space before retrying installation.
 
-If installation reports `ENOSPC`, free disk space before retrying. Do not run the dev server until dependency installation completes.
-
-## Folder structure
+## Simple folder map
 
 ```text
-wexoraaportfolio/
-├── src/
-│   ├── app/
-│   │   ├── layout.jsx               # Page metadata and global stylesheet
-│   │   └── page.jsx                 # Assembles the portfolio sections
-│   ├── components/
-│   │   ├── layout/                  # Brand, Header, Footer
-│   │   ├── portfolio/               # One component for each portfolio section
-│   │   └── ui/                      # ContentBlocks, ImageGallery, SectionHeading
-│   ├── data/                        # Editable text, project details, image paths
-│   └── styles/
-│       └── globals.css              # Formatted CSS with responsive layouts
-├── public/
-│   ├── images/
-│   │   ├── brand/
-│   │   ├── websites/
-│   │   ├── mobile/
-│   │   ├── creatives/
-│   │   ├── campaigns/
-│   │   └── unused/                  # Optional generated artwork; not on the page
-│   └── documents/                   # Original portfolio PDF
-├── scripts/
-│   └── serve.mjs                    # Cross-platform static production server
-├── docs/
-│   └── editing-content.md           # Practical content-editing guide
-├── next.config.mjs
-├── package.json
-└── package-lock.json
+src/
+  app/                    Page layout and section order
+  components/
+    layout/               Header, footer, logo
+    portfolio/            Project cards and page sections
+    ui/                   Gallery, expandable content, shared headings
+  data/
+    projects.json         ADD / EDIT WEBSITE PROJECTS HERE
+    site.json             Brand, navigation, main text, founder
+    mobile-app.json       Mobile app content
+    creative-works.json   Creative work
+    campaigns.json        Campaign results
+  styles/globals.css      Colors, spacing, responsive design
+public/images/
+  websites/               ADD WEBSITE SCREENSHOTS HERE
+  brand/                  Logo
+  mobile/                 App screens
+  creatives/              Creative images
+  campaigns/              Result screenshots
+scripts/                  Content validation and local production server
+docs/
+  project-template.json   Copy this to add a project
+  editing-content.md      Three-step editing guide
+  archive/                Original source files; not served on the website
 ```
 
-## Where to make changes
+## Add a website project
 
-| Change                                         | File                                 |
-| ---------------------------------------------- | ------------------------------------ |
-| Brand, navigation, main USP, founder           | `src/data/site.json`                 |
-| Website names, URLs, descriptions, screenshots | `src/data/website-projects.json`     |
-| Chat application content and screens           | `src/data/mobile-app.json`           |
-| Creative work and client names                 | `src/data/creative-works.json`       |
-| Social media, Meta Ads, Google Ads results     | `src/data/campaigns.json`            |
-| Original introduction and closing notes        | `src/data/portfolio-notes.json`      |
-| Page section order                             | `src/app/page.jsx`                   |
-| Colors, spacing, typography, responsive styles | `src/styles/globals.css`             |
-| Image enlargement behavior                     | `src/components/ui/ImageGallery.jsx` |
+1. Add its screenshots to `public/images/websites/`.
+2. Copy [project-template.json](docs/project-template.json) into the array in `src/data/projects.json`. Fill in the name, URL, description, features, and image paths. Separate project objects with a comma.
+3. Run `npm run check:projects`, then check the page with `npm run dev`.
 
-See [Editing content](docs/editing-content.md) for examples. `src/data/original-document.json` is an archival extraction of the supplied PDF, not a live data source. Its original image IDs are preserved for reference; use the descriptive image paths in the editable data files for the website.
+The grid, project numbering, and website counts update automatically. No component editing or imports needed. Use an empty `features` array if there are no features to list.
 
-## Production
+Full examples: [Editing content](docs/editing-content.md).
+
+## Build and preview
 
 ```sh
 npm run build
 npm start
 ```
 
-The build generates `out/`. `npm start` serves that directory on localhost port 3000 using Node. You can also deploy `out/` to a static host or import the repository into Vercel. To change the server port in PowerShell: `$env:PORT=3001; npm start`.
+Build validates projects and generates `out/` for static hosting. `npm start` serves it locally using Node. The repository can also be deployed with Vercel.
 
-## Formatting
+## Useful checks
 
 ```sh
+npm run check:projects
 npm run format
 npm run format:check
 ```
 
-Keep `package-lock.json` committed. Do not commit `node_modules/`, `.next/`, or `out/`.
-
-## Minimal portfolio layout
-
-Website projects use an automatically growing two-column grid (one column on mobile). Every original screenshot remains visible. Long descriptions and feature lists are available under each card's overview. The About Us and founder-note sections are removed from the page; their original text remains archived in `src/data/portfolio-notes.json` and the source PDF. To add more work, append entries to the appropriate data file; no layout changes are needed.
+Keep `package-lock.json` committed. `node_modules/`, `.next/`, and `out/` are generated folders and ignored by Git. `docs/archive/` is reference material, not live website content.

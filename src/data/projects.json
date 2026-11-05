@@ -1,0 +1,140 @@
+[
+  {
+    "id": "exploring-munnar",
+    "name": "Exploring Munnar",
+    "category": "Travel & tourism",
+    "websiteUrl": "https://www.exploringmunnar.com/",
+    "images": [
+      "/images/websites/exploring-munnar-home.jpeg",
+      "/images/websites/exploring-munnar-sign-in.jpeg",
+      "/images/websites/exploring-munnar-admin.jpeg"
+    ],
+    "description": [
+      "A fully customized travel and tourism booking platform designed to help users discover and book the best experiences in Munnar. The website offers hotel reservations, cab bookings, bike rentals, self-drive car rentals, tour itineraries, local activities, and travel information through an intuitive user interface. It includes a comprehensive admin panel for managing users, hotels, bookings, activities, itineraries, transport schedules, reports, and live updates, ensuring seamless operations and an enhanced customer experience."
+    ],
+    "featuresTitle": "Admin Panel Features:",
+    "features": [
+      "Dashboard & Analytics",
+      "User Management",
+      "Hotel Management",
+      "Booking Management",
+      "Cab & Bike Rental Management",
+      "Activities Management",
+      "Itinerary Management",
+      "Bus Timings Management",
+      "Highlights & Live Information",
+      "Reports & Analytics",
+      "Secure Admin Login & Access Control"
+    ]
+  },
+  {
+    "id": "vps-infra-associates",
+    "name": "VPS Infra Associates",
+    "category": "Construction & infrastructure",
+    "websiteUrl": "https://vpsinfraassociates.com/",
+    "images": ["/images/websites/vps-infra-home.jpeg"],
+    "description": [
+      "A fully customized corporate website developed for a construction and infrastructure company, designed to showcase its services, completed projects, and business profile with a modern, professional, and responsive interface."
+    ],
+    "featuresTitle": "Key Features:",
+    "features": [
+      "Company Profile & About Us",
+      "Construction & Infrastructure Service Listings",
+      "Projects Portfolio Showcase",
+      "Responsive & Mobile-Friendly Design",
+      "Contact & Inquiry Form",
+      "WhatsApp & Call Integration",
+      "Gallery & Project Highlights",
+      "SEO Optimized Website",
+      "Fast Loading & Secure Performance",
+      "User-Friendly Navigation"
+    ]
+  },
+  {
+    "id": "intercity-riders",
+    "name": "Intercity Riders",
+    "category": "Taxi booking platform",
+    "websiteUrl": "https://intercityonewaytaxi.in/",
+    "images": ["/images/websites/intercity-riders-home.jpeg"],
+    "description": [
+      "A fully customized intercity taxi booking platform designed to provide seamless one-way, round-trip, and airport transfer services across Tamil Nadu. The website offers an intuitive booking experience, transparent pricing, responsive design, and quick inquiry options, ensuring a convenient and reliable travel experience for customers."
+    ],
+    "featuresTitle": "Key Features:",
+    "features": [
+      "One-Way & Round Trip Booking",
+      "Airport Pickup & Drop",
+      "Online Booking Form",
+      "Transparent Pricing",
+      "WhatsApp & Call Integration",
+      "Route & Service Information",
+      "SEO Optimized Website"
+    ]
+  },
+  {
+    "id": "covai-home-tech",
+    "name": "Covai Home Tech",
+    "category": "Home appliance services",
+    "websiteUrl": "https://covaihometech.in/",
+    "images": ["/images/websites/covai-home-tech-home.jpeg"],
+    "description": [
+      "A fully customized service-based website developed for a home appliance repair company, offering AC, washing machine, refrigerator, and TV repair services. The website provides clear service information, quick contact options, online service inquiries, and a responsive user interface to enhance customer convenience."
+    ],
+    "featuresTitle": "Key Features:",
+    "features": [
+      "Home Appliance Repair Services",
+      "AC, Refrigerator, TV & Washing Machine Services",
+      "Online Service Request Form",
+      "WhatsApp & Call Integration",
+      "Service Area Information",
+      "Responsive Mobile-Friendly Design",
+      "Contact & Inquiry Management",
+      "SEO Optimized Website",
+      "Fast & Secure Performance"
+    ]
+  },
+  {
+    "id": "gym-hack",
+    "name": "Gym Hack",
+    "category": "Fitness e-commerce",
+    "websiteUrl": "https://gymhack.in/",
+    "images": [
+      "/images/websites/gym-hack-home.jpeg",
+      "/images/websites/gym-hack-products.jpeg",
+      "/images/websites/gym-hack-admin.jpeg"
+    ],
+    "description": [
+      "A fully customized product-based eCommerce website for GymHack, designed to showcase and sell premium fitness nutrition products such as oats and muesli. The website includes a powerful admin panel for easy product management, inventory updates, order tracking, customer management, and seamless online shopping, ensuring a smooth experience for both customers and administrators.",
+      "Integrated secure online payment system supporting multiple payment methods, enabling customers to complete purchases safely and conveniently with real-time payment confirmation and seamless checkout experience"
+    ],
+    "featuresTitle": "Key Features:",
+    "features": []
+  },
+  {
+    "id": "purple-drop-taxi",
+    "name": "Purple Drop Taxi",
+    "category": "Travel & mobility",
+    "websiteUrl": "https://purpledroptaxi.com/",
+    "images": ["/images/websites/purple-drop-taxi-home.jpeg"],
+    "description": [
+      "A fully customized taxi booking website developed for Purple Drop Taxi, designed to provide a simple, reliable, and user- friendly travel booking experience across Tamil Nadu. The website allows customers to easily explore taxi services, check transparent pricing, select their preferred vehicle, and submit trip details through a convenient online booking system.",
+      "The platform supports multiple travel requirements including one-way trips, round trips, airport pickup and drop, and outstation travel. It is designed with a responsive and mobile- friendly interface, clear call and WhatsApp options, and an",
+      "easy-to-use booking form to help customers plan their journeys quickly and conveniently."
+    ],
+    "featuresTitle": "Key Features:",
+    "features": []
+  },
+  {
+    "id": "taerg-laundry",
+    "name": "Taerg Laundry",
+    "category": "Premium garment care",
+    "websiteUrl": "https://taerglaundry.com/",
+    "images": ["/images/websites/taerg-laundry-home.jpeg"],
+    "description": [
+      "A fully customized premium laundry service website developed for TAERG Laundry, designed to provide customers with a simple and convenient way to access professional garment care services. The website showcases TAERG’s specialized cleaning solutions for everyday clothing as well as premium garments such as silk sarees, blazers, lehengas, designer wear, uniforms, shoes, bags, and more.",
+      "The website features an easy-to-use service booking system, detailed service information, pickup and delivery options, and a responsive mobile-friendly interface. It also highlights TAERG’s advanced SoftWash wet-cleaning technology, offering",
+      "gentle and professional care for delicate and premium fabrics while delivering a smooth digital experience from service discovery to booking."
+    ],
+    "featuresTitle": "Key Features:",
+    "features": []
+  }
+]

@@ -1,5 +1,4 @@
 import ContentDisclosure from '../ui/ContentDisclosure';
-import ContentBlocks from '../ui/ContentBlocks';
 import ImageGallery from '../ui/ImageGallery';
 
 export default function ProjectCard({ project, number }) {
@@ -31,7 +30,21 @@ export default function ProjectCard({ project, number }) {
         </span>
       </a>
       <ContentDisclosure className="project-details" label={`${project.name} overview & features`}>
-        <ContentBlocks blocks={project.content} />
+        <div className="copy">
+          {project.description.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          {project.features.length > 0 && (
+            <>
+              <p>{project.featuresTitle}</p>
+              <ul>
+                {project.features.map((feature) => (
+                  <li key={feature}>{feature}</li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
       </ContentDisclosure>
     </article>
   );

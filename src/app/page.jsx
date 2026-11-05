@@ -6,7 +6,7 @@ import MobileApplication from '../components/portfolio/MobileApplication';
 import CreativeWorks from '../components/portfolio/CreativeWorks';
 import CampaignResults from '../components/portfolio/CampaignResults';
 
-import websiteProjects from '../data/website-projects.json';
+import websiteProjects from '../data/projects.json';
 import mobileApplication from '../data/mobile-app.json';
 import creativeWorks from '../data/creative-works.json';
 import campaigns from '../data/campaigns.json';

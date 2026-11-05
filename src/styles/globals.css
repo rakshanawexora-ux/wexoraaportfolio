@@ -99,15 +99,6 @@ sup {
   font-weight: 400;
   vertical-align: top;
 }
-.pdf-link {
-  padding: 9px 16px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  font-size: 12px;
-}
-.pdf-link:hover {
-  background: var(--surface);
-}
 main {
   max-width: 1240px;
   margin: auto;
@@ -549,9 +540,6 @@ dialog > img {
     gap: 18px;
     font-size: 12px;
   }
-  .pdf-link {
-    display: none;
-  }
   .intro {
     padding-top: 45px;
   }
@@ -861,15 +849,6 @@ nav a {
   text-underline-offset: 5px;
   text-decoration-color: #a2b298;
 }
-.pdf-link {
-  display: inline-flex;
-  color: #24462c;
-  background: #eaf1e3;
-  border-color: #b5c6aa;
-  font-size: 12px;
-  font-weight: 500;
-  white-space: nowrap;
-}
 footer > a:not(.brand) {
   color: #24462c;
   font-size: 13px;
@@ -888,10 +867,6 @@ footer > a:not(.brand) {
     width: 100%;
     justify-content: space-between;
   }
-  .pdf-link {
-    display: inline-flex;
-    margin-left: auto;
-  }
   html {
     scroll-padding-top: 145px;
   }
@@ -909,9 +884,5 @@ footer > a:not(.brand) {
   }
   nav a {
     font-size: 12px;
-  }
-  .pdf-link {
-    font-size: 11px;
-    padding: 8px 10px;
   }
 }

@@ -1,8 +1,7 @@
 {
   "brand": {
     "name": "Wexoraa Infotech",
-    "logo": "/images/brand/wexoraa-logo.png",
-    "portfolioPdf": "/documents/wexoraa-portfolio.pdf"
+    "logo": "/images/brand/wexoraa-logo.png"
   },
   "navigation": [
     {
