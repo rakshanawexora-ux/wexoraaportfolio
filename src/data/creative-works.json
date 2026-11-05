@@ -2,7 +2,7 @@
   "introduction": [
     {
       "type": "paragraph",
-      "text": "Social Media & Creative Works"
+      "text": "Social Media"
     },
     {
       "type": "paragraph",
@@ -43,10 +43,6 @@
       "images": ["/images/creatives/ayyappa-ghee.jpeg"]
     },
     {
-      "name": "Intercity Riders",
-      "images": ["/images/creatives/intercity-riders.jpeg"]
-    },
-    {
       "name": "Taerg Laundry",
       "images": ["/images/creatives/taerg-laundry.jpeg"]
     },
@@ -57,10 +53,6 @@
     {
       "name": "Exploring Munnar",
       "images": ["/images/creatives/exploring-munnar.jpeg"]
-    },
-    {
-      "name": "KR Fruits&Vegetables",
-      "images": ["/images/creatives/kr-fruits-vegetables.jpeg"]
     }
   ]
 }

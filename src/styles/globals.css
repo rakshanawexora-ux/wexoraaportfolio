@@ -972,3 +972,91 @@ footer > a:not(.brand) {
     font-size: 14px;
   }
 }
+
+/* Consistent project rows keep covers, titles, links, and details aligned. */
+.projects-grid {
+  align-items: stretch;
+  gap: 32px 28px;
+}
+.project {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+  row-gap: 0;
+  align-self: stretch;
+}
+.project-preview {
+  aspect-ratio: 16 / 11;
+  min-height: 0;
+  overflow: hidden;
+}
+.project-preview .gallery {
+  height: 100%;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 0.38fr);
+}
+.project-preview .gallery:not(:has(button:nth-child(2))) {
+  grid-template-rows: minmax(0, 1fr);
+}
+.project-preview .gallery button {
+  height: 100%;
+  min-height: 0;
+}
+.project-preview .gallery img {
+  height: 100%;
+  object-fit: contain;
+  background: #ffffff;
+}
+.project-brand-cover {
+  height: 100%;
+  min-height: 0;
+}
+.project-brand-cover.taxi {
+  background: #2b1b13;
+  color: #ff9a54;
+}
+.project > .project-heading {
+  min-height: 82px;
+  align-items: flex-start;
+}
+.project > .project-meta {
+  align-items: flex-start;
+  min-height: 34px;
+}
+.project > .project-link-row {
+  min-height: 64px;
+}
+.project > .project-details {
+  align-self: start;
+}
+.creative {
+  display: flex;
+  flex-direction: column;
+}
+.creative-heading {
+  min-height: 30px;
+}
+.creative .gallery {
+  flex: 1;
+}
+.creative .gallery button {
+  aspect-ratio: 16 / 9;
+}
+.creative .gallery img {
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .project {
+    grid-template-rows: auto auto auto auto auto;
+    grid-row: auto;
+  }
+  .project > .project-link-row:empty {
+    min-height: 0;
+  }
+  .project-preview {
+    aspect-ratio: 16 / 12;
+  }
+  .project-brand-cover > p {
+    font-size: 28px;
+  }
+}

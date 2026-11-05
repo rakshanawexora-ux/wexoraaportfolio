@@ -5,13 +5,13 @@ import SectionHeading from '../ui/SectionHeading';
 
 export default function CreativeWorks({ creatives }) {
   return (
-    <section id="creatives" className="portfolio-section">
+    <section id="social-media" className="portfolio-section">
       <SectionHeading
-        title="Creative works"
+        title="Social Media"
         count={creatives.projects.length}
         caption="SOCIAL MEDIA & BRAND CONTENT"
       />
-      <ContentDisclosure className="creative-introduction" label="Behind the creative work">
+      <ContentDisclosure className="creative-introduction" label="Our social media work">
         <ContentBlocks blocks={creatives.introduction} />
       </ContentDisclosure>
       <div className="creative-grid">

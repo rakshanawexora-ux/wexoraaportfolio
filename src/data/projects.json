@@ -232,5 +232,27 @@
         ]
       }
     ]
+  },
+  {
+    "id": "oneway-drop-taxi",
+    "name": "OneWay Drop Taxi",
+    "category": "Taxi services · UI/UX design & development",
+    "websiteUrl": null,
+    "images": [],
+    "coverStyle": "taxi",
+    "coverTitle": "One-way travel, your way.",
+    "description": [
+      "A website for a one-way drop taxi service provider, with complete UI/UX design and development by Wexoraa Infotech.",
+      "The design gives travellers a clear starting point for planning a journey, with prominent service, tariff, route, and contact information. A warm orange and dark-brown visual direction makes key actions easy to spot.",
+      "The experience is organised around helping visitors explore the service and take the next step towards a trip enquiry, with clear navigation and accessible contact options."
+    ],
+    "featuresTitle": "Project scope:",
+    "features": [
+      "Complete UI/UX design",
+      "Website development",
+      "Service, tariff, and route information design",
+      "Clear journey-planning and contact actions",
+      "Consistent visual design for a one-way taxi brand"
+    ]
   }
 ]

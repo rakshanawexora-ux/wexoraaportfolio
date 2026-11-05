@@ -25,20 +25,22 @@ export default function ProjectCard({ project, number }) {
         <span>PROJECT {String(number).padStart(2, '0')}</span>
         <span>{project.caseStudy ? 'Platform architecture' : 'Website design & development'}</span>
       </div>
-      {project.websiteUrl && (
-        <a
-          href={project.websiteUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="visit"
-          aria-label={`Visit ${project.name} website`}
-        >
-          <span className="visit-url">{new URL(project.websiteUrl).hostname}</span>
-          <span className="visit-action">
-            Visit website <span aria-hidden="true">↗</span>
-          </span>
-        </a>
-      )}
+      <div className="project-link-row">
+        {project.websiteUrl && (
+          <a
+            href={project.websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="visit"
+            aria-label={`Visit ${project.name} website`}
+          >
+            <span className="visit-url">{new URL(project.websiteUrl).hostname}</span>
+            <span className="visit-action">
+              Visit website <span aria-hidden="true">↗</span>
+            </span>
+          </a>
+        )}
+      </div>
       <ContentDisclosure
         className="project-details"
         label={`${project.name} ${project.caseStudy ? 'case study' : 'overview & features'}`}
