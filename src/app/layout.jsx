@@ -1,6 +1,10 @@
 import '../styles/globals.css';
+import { getSiteUrl } from '../lib/site-url';
+
+const siteUrl = getSiteUrl();
 
 export const metadata = {
+  ...(siteUrl ? { metadataBase: new URL(siteUrl), alternates: { canonical: '/' } } : {}),
   title: 'Wexoraa Infotech — Our portfolio',
   description:
     'Explore the websites, mobile apps, creative work and campaign results of Wexoraa Infotech.',

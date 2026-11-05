@@ -70,3 +70,13 @@ npm run format:check
 ```
 
 Keep `package-lock.json` committed. `node_modules/`, `.next/`, and `out/` are generated folders and ignored by Git. `docs/archive/` is reference material, not live website content.
+
+## Search engines: robots.txt and sitemap.xml
+
+Next.js generates `/robots.txt` and `/sitemap.xml` from `src/app/robots.js` and `src/app/sitemap.js`.
+
+The live origin is `https://wexoraa.in`, configured as `siteUrl` in `src/data/site.json`. For another deployment, set `SITE_URL` in `.env.local` or the host environment to override it. Rebuild and redeploy after changing the domain.
+
+With `SITE_URL` configured, the homepage has a canonical URL and the robots file links to the sitemap. Without it, no domain is invented: robots allows crawling, but sitemap entries and canonical metadata are omitted. This is a one-page site, so portfolio section anchors do not need separate sitemap entries.
+
+After deployment, check `/robots.txt` and `/sitemap.xml` on your domain and submit the sitemap URL in Google Search Console. A sitemap helps discovery; it does not guarantee indexing or ranking.
