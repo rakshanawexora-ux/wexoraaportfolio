@@ -334,9 +334,7 @@
     "type": "software",
     "category": "Restaurant management SaaS",
     "websiteUrl": "https://www.relaytable.in/",
-    "images": [],
-    "coverTitle": "Scan the table. Order instantly.",
-    "coverStyle": "orange",
+    "images": ["/images/websites/relaytable-home.png"],
     "description": [
       "RelayTable is a restaurant management SaaS product that brings QR-powered ordering and everyday restaurant operations into one platform. Guests scan a QR code at their table to browse a branded digital menu and place orders, while the restaurant team manages incoming orders from a central dashboard.",
       "The platform brings together table and menu management, staff, inventory, and revenue tracking, helping restaurants coordinate service and keep a clear view of their day-to-day business. Its mobile-friendly guest experience connects the dining table with the team behind every order."
