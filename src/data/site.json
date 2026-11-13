@@ -60,7 +60,16 @@
         "id": "grow",
         "title": "Grow",
         "description": "Reach the right audience and turn attention into business growth.",
-        "services": ["Digital marketing", "Performance marketing"]
+        "services": [
+          "Digital marketing",
+          "Performance marketing",
+          "Search engine optimisation (SEO)",
+          "Social media marketing",
+          "Content marketing",
+          "Google Ads",
+          "Meta Ads (Facebook & Instagram)",
+          "Campaign tracking & optimisation"
+        ]
       }
     ]
   },
