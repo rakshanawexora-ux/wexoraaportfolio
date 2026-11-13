@@ -108,10 +108,10 @@ header nav {
 header nav a {
   position: relative;
   padding-block: 8px;
-  color: var(--muted);
-  font-size: 11px;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
+  color: var(--ink);
+  font-size: 12px;
+  letter-spacing: 0.1px;
+  text-transform: none;
   transition: color 200ms ease;
 }
 header nav a::after {
@@ -147,10 +147,12 @@ sup {
   border-radius: 5px;
   background: var(--ink);
   color: var(--paper);
-  font-size: 10px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  text-transform: none;
   transition: background 200ms ease;
+
+  font-weight: 600;
 }
 .header-action:hover {
   background: #3e5547;
@@ -261,14 +263,18 @@ h1 em {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  min-height: 34px;
+  min-height: 40px;
   padding: 7px 10px;
   border: 1px solid #cdd7c9;
   border-radius: 20px;
-  background: #fafbf8a6;
-  color: var(--muted);
-  font-size: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 12px;
   letter-spacing: 0;
+
+  font-weight: 600;
+
+  border-color: #b5c6aa;
 }
 .reel-motion:hover {
   color: var(--ink);
@@ -337,7 +343,9 @@ h1 em {
   gap: 10px;
   padding: 12px 14px;
   border-top: 1px solid var(--line);
-  font-size: 11px;
+  font-size: 13px;
+
+  font-weight: 600;
 }
 .hero-project-label .arrow-icon {
   width: 15px;
@@ -354,9 +362,13 @@ h1 em {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  min-height: 34px;
-  font-size: 10px;
+  min-height: 44px;
+  font-size: 13px;
   letter-spacing: 0;
+
+  font-weight: 600;
+
+  color: var(--ink);
 }
 .hero-reel-footer .arrow-icon {
   width: 16px;
@@ -400,23 +412,33 @@ h1 em {
   justify-content: center;
   gap: 12px;
   flex-shrink: 0;
-  min-height: 46px;
+  min-height: 48px;
   padding: 12px 18px;
   border: 1px solid transparent;
   border-radius: 4px;
   background: transparent;
   color: var(--ink);
-  font-size: 10px;
-  letter-spacing: 0.9px;
-  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.1px;
+  text-transform: none;
   transition:
     color 200ms ease,
     background 200ms ease,
     border-color 200ms ease;
+
+  font-weight: 600;
 }
 .project-filters button > span {
-  font-size: 9px;
-  opacity: 0.65;
+  font-size: 11px;
+  opacity: 1;
+
+  padding: 2px 6px;
+
+  border-radius: 4px;
+
+  background: var(--surface);
+
+  color: var(--muted);
 }
 .project-filters button:hover {
   border-color: #cdd7c9;
@@ -544,6 +566,10 @@ h1 em {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.8;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
 }
 .project-tags {
   display: flex;
@@ -607,15 +633,15 @@ h1 em {
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  min-height: 46px;
+  min-height: 48px;
   padding: 12px 20px;
   border-radius: 4px;
-  background: var(--accent);
-  color: #172410;
-  font-size: 10px;
+  background: #3c5c39;
+  color: var(--paper);
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  text-transform: none;
   transition:
     background 200ms ease,
     transform 200ms ease;
@@ -626,7 +652,7 @@ h1 em {
   transition: transform 200ms ease;
 }
 .visit:hover {
-  background: #86ac64;
+  background: #2e4b2f;
 }
 .visit:hover .arrow-icon {
   transform: translate(2px, -2px);
@@ -763,25 +789,35 @@ summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 10px;
   padding: 16px 0;
   cursor: pointer;
   list-style: none;
+
+  flex-wrap: wrap;
 }
 summary::-webkit-details-marker {
   display: none;
 }
 .disclosure-label {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
+
+  color: var(--ink);
+
+  font-weight: 600;
+
+  flex: 1 1 160px;
 }
 .disclosure-action {
   display: flex;
   align-items: center;
   gap: 9px;
   flex-shrink: 0;
-  font-size: 10px;
-  color: var(--muted);
+  font-size: 12px;
+  color: #344b3a;
+
+  margin-left: auto;
 }
 .disclosure-icon {
   display: inline-block;
@@ -973,7 +1009,7 @@ summary::-webkit-details-marker {
 }
 .campaign-details summary {
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 /* An oversized sign-off, in the brand's dark green. */
@@ -1082,11 +1118,11 @@ dialog > img {
   right: 8px;
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border: 0;
   border-radius: 50%;
-  background: none;
+  background: var(--surface);
   color: var(--ink);
   font-size: 22px;
 }
@@ -1120,6 +1156,14 @@ dialog > img {
   }
   .header-action {
     gap: 14px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: none;
+
+    letter-spacing: 0.2px;
   }
   .project {
     gap: 32px;
@@ -1134,6 +1178,16 @@ dialog > img {
   .project-filters button {
     padding-inline: 13px;
     gap: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    min-height: 48px;
+
+    letter-spacing: 0.1px;
+
+    text-transform: none;
   }
   .filter-caption {
     position: absolute;
@@ -1175,12 +1229,24 @@ dialog > img {
   }
   header nav a {
     padding-block: 3px;
-    font-size: 10px;
+    font-size: 11px;
+
+    text-transform: none;
+
+    letter-spacing: 0.1px;
+
+    color: var(--ink);
   }
   .header-action {
     min-height: 38px;
-    font-size: 9px;
+    font-size: 12px;
     padding-block: 8px;
+
+    font-weight: 600;
+
+    text-transform: none;
+
+    letter-spacing: 0.2px;
   }
   .intro {
     padding-top: 64px;
@@ -1209,8 +1275,14 @@ dialog > img {
   }
   .project-filters button {
     padding-inline: 12px;
-    font-size: 9px;
-    letter-spacing: 0.3px;
+    font-size: 13px;
+    letter-spacing: 0.1px;
+
+    font-weight: 600;
+
+    min-height: 48px;
+
+    text-transform: none;
   }
   .project {
     gap: 28px;
@@ -1227,6 +1299,10 @@ dialog > img {
   }
   .project-summary {
     font-size: 14px;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
   }
   .project-tags {
     margin-top: 16px;
@@ -1238,10 +1314,6 @@ dialog > img {
     font-size: 12px;
   }
   .project-index {
-    display: none;
-  }
-  .project-information .disclosure-action > .when-closed,
-  .project-information .disclosure-action > .when-open {
     display: none;
   }
   .preview-label,
@@ -1276,17 +1348,25 @@ dialog > img {
 }
 @media (max-width: 600px) {
   .header-action {
-    font-size: 8px;
-    letter-spacing: 0.7px;
+    font-size: 12px;
+    letter-spacing: 0.2px;
     gap: 10px;
     padding-inline: 10px;
+
+    font-weight: 600;
+
+    text-transform: none;
   }
   header nav {
     gap: 8px;
   }
   header nav a {
-    font-size: 9px;
-    letter-spacing: 0.4px;
+    font-size: 11px;
+    letter-spacing: 0.1px;
+
+    text-transform: none;
+
+    color: var(--ink);
   }
   main {
     padding-inline: 5%;
@@ -1335,9 +1415,15 @@ dialog > img {
     gap: 4px;
   }
   .project-filters button {
-    min-height: 44px;
+    min-height: 48px;
     padding: 10px 13px;
-    font-size: 9px;
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.1px;
+
+    text-transform: none;
   }
   .website-section {
     padding: 22px 0 64px;
@@ -1379,6 +1465,10 @@ dialog > img {
   .project-summary {
     font-size: 14px;
     -webkit-line-clamp: 4;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
   }
   .project-highlights li {
     font-size: 13px;
@@ -1396,10 +1486,20 @@ dialog > img {
     display: inline;
   }
   .disclosure-label {
-    font-size: 11px;
+    font-size: 13px;
+
+    color: var(--ink);
+
+    font-weight: 600;
+
+    flex: 1 1 160px;
   }
   .disclosure-action {
-    font-size: 9px;
+    font-size: 12px;
+
+    color: #344b3a;
+
+    margin-left: auto;
   }
   .zoom {
     opacity: 1;
@@ -1586,7 +1686,9 @@ dialog > img {
   }
   .hero-project-label {
     padding: 10px;
-    font-size: 9px;
+    font-size: 13px;
+
+    font-weight: 600;
   }
   .hero-browser-bar > span {
     max-width: 100px;
@@ -1607,8 +1709,18 @@ dialog > img {
     letter-spacing: 0.4px;
   }
   .reel-motion {
-    font-size: 9px;
+    font-size: 11px;
     padding-inline: 8px;
+
+    min-height: 40px;
+
+    font-weight: 600;
+
+    background: var(--paper);
+
+    color: var(--ink);
+
+    border-color: #b5c6aa;
   }
   .hero-reel-grid {
     display: flex;
@@ -1624,7 +1736,9 @@ dialog > img {
   }
   .hero-project-label {
     padding: 11px 12px;
-    font-size: 11px;
+    font-size: 13px;
+
+    font-weight: 600;
   }
   .hero-reel-footer > span {
     display: none;
@@ -1633,15 +1747,129 @@ dialog > img {
     justify-content: flex-end;
   }
   .hero-reel-footer > a {
-    font-size: 9px;
+    font-size: 12px;
+
+    min-height: 44px;
+
+    font-weight: 600;
+
+    color: var(--ink);
   }
 }
 @media (prefers-reduced-motion: reduce) {
   .reel-motion {
     display: none;
+
+    font-size: 11px;
+
+    min-height: 40px;
+
+    font-weight: 600;
+
+    background: var(--paper);
+
+    color: var(--ink);
+
+    border-color: #b5c6aa;
   }
   .reveal-ready {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Keep every action readable, including counters and open/closed labels. */
+html.lenis {
+  scroll-behavior: auto;
+}
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+.project-filters button {
+  border-color: var(--line);
+  background: var(--paper);
+}
+.project-filters button[aria-pressed='true'] > span {
+  background: #fafbf826;
+  color: var(--paper);
+}
+.content-disclosure > summary {
+  min-height: 48px;
+  padding: 14px 16px;
+  margin-top: 12px;
+  border: 1px solid #cdd7c9;
+  border-radius: 7px;
+  background: var(--surface);
+}
+.content-disclosure > summary:hover {
+  background: #e6eedf;
+  border-color: #9fb78e;
+}
+.content-disclosure[open] > summary {
+  background: #e6eedf;
+  border-color: #9fb78e;
+}
+.disclosure-body {
+  margin-top: 12px;
+}
+.header-action,
+.visit,
+.reel-motion,
+.project-filters button,
+.content-disclosure > summary,
+.close {
+  transition:
+    color 220ms ease,
+    background 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.header-action .arrow-icon,
+.hero-reel-footer .arrow-icon {
+  transition: transform 220ms ease;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #537842;
+  outline-offset: 4px;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .header-action:hover,
+  .visit:hover,
+  .reel-motion:hover,
+  .project-filters button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px #202d271a;
+  }
+  .header-action:hover .arrow-icon {
+    transform: translate(2px, -2px);
+  }
+  .hero-reel-footer > a:hover .arrow-icon {
+    transform: rotate(180deg) translate(2px, -2px);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .header-action:active,
+  .visit:active,
+  .reel-motion:active,
+  .project-filters button:active,
+  .content-disclosure > summary:active {
+    transform: scale(0.98);
+    box-shadow: none;
+  }
+}
+@media (max-width: 600px) {
+  .hero-reel-heading {
+    flex-wrap: wrap;
+  }
+  .header-action {
+    min-height: 44px;
+    gap: 8px;
+  }
+  .footer-bottom > a:not(.brand) {
+    min-height: 44px;
+    font-size: 12px;
   }
 }

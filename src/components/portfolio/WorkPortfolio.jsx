@@ -7,6 +7,7 @@ import WebsiteProjects from './WebsiteProjects';
 import MobileApplication from './MobileApplication';
 import CreativeWorks from './CreativeWorks';
 import CampaignResults from './CampaignResults';
+import { useSmoothScroll } from '../ui/SmoothScrollProvider';
 
 const filters = [
   { id: 'all', label: 'All projects' },
@@ -19,6 +20,7 @@ const filters = [
 export default function WorkPortfolio({ projects, application, creatives, campaigns }) {
   const [filter, setFilter] = useState('all');
   const workRef = useRef(null);
+  const scrollTo = useSmoothScroll();
   const counts = {
     websites: projects.length,
     mobile: 1,
@@ -32,13 +34,13 @@ export default function WorkPortfolio({ projects, application, creatives, campai
     setFilter(id);
     if (top < 80) {
       requestAnimationFrame(() =>
-        workRef.current.scrollIntoView({ behavior: scrollBehavior(), block: 'start' }),
+        scrollTo(workRef.current, {
+          offset: parseFloat(
+            getComputedStyle(document.documentElement).getPropertyValue('--header-height'),
+          ),
+        }),
       );
     }
-  }
-
-  function scrollBehavior() {
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
   }
 
   function navigate(event, href) {
@@ -47,7 +49,16 @@ export default function WorkPortfolio({ projects, application, creatives, campai
     setFilter('all');
     window.history.pushState(null, '', href);
     requestAnimationFrame(() =>
-      document.querySelector(href)?.scrollIntoView({ behavior: scrollBehavior() }),
+      scrollTo(
+        href,
+        href === '#work'
+          ? {
+              offset: parseFloat(
+                getComputedStyle(document.documentElement).getPropertyValue('--header-height'),
+              ),
+            }
+          : undefined,
+      ),
     );
   }
 
@@ -57,12 +68,12 @@ export default function WorkPortfolio({ projects, application, creatives, campai
       const target = id ? document.getElementById(id) : null;
       if (!id || (target && workRef.current.contains(target))) {
         setFilter('all');
-        requestAnimationFrame(() => target?.scrollIntoView({ behavior: scrollBehavior() }));
+        requestAnimationFrame(() => target && scrollTo(target));
       }
     };
     window.addEventListener('hashchange', handleHash);
     return () => window.removeEventListener('hashchange', handleHash);
-  }, []);
+  }, [scrollTo]);
 
   useEffect(() => {
     const scroller = workRef.current.querySelector('.project-filters');
@@ -121,7 +132,7 @@ export default function WorkPortfolio({ projects, application, creatives, campai
 
   return (
     <>
-      <a className="skip-link" href="#work">
+      <a className="skip-link" href="#work" onClick={(event) => navigate(event, '#work')}>
         Skip to projects
       </a>
       <Header websiteCount={projects.length} onNavigate={navigate} />

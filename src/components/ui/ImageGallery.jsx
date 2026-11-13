@@ -40,7 +40,12 @@ export default function ImageGallery({ images, title, mobile = false }) {
           </button>
         ))}
       </div>
-      <dialog ref={dialogRef} onClick={closeOnBackdrop} aria-label={`${title} enlarged image`}>
+      <dialog
+        ref={dialogRef}
+        onClick={closeOnBackdrop}
+        aria-label={`${title} enlarged image`}
+        data-lenis-prevent=""
+      >
         <button
           className="close"
           onClick={() => dialogRef.current.close()}
