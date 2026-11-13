@@ -37,12 +37,16 @@
         "description": "Shape your brand, digital presence and creative content.",
         "services": [
           "Branding",
+          "Logo design & brand identity",
           "Graphic design",
+          "Packaging & print design",
           "UI design",
           "UX design",
+          "Website & landing page design",
           "Websites & e-commerce",
           "Social media creatives",
-          "Video shoots & production"
+          "Video shoots & production",
+          "Video editing & motion graphics"
         ]
       },
       {
@@ -53,7 +57,13 @@
           "ERP software",
           "CRM software",
           "Mobile applications",
-          "Custom business software"
+          "Custom business software",
+          "Admin dashboards",
+          "Inventory & order management",
+          "Billing & invoicing systems",
+          "Booking & appointment systems",
+          "Workflow automation",
+          "API & payment integrations"
         ]
       },
       {
