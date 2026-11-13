@@ -4,16 +4,7 @@ import ImageGallery from '../ui/ImageGallery';
 
 export default function CampaignResults({ campaigns }) {
   return (
-    <section id="campaigns" className="portfolio-section campaign-section">
-      <div className="campaign-introduction">
-        <p className="eyebrow">CREATIVE THINKING. STRATEGIC REACH.</p>
-        <h2>
-          Beyond Visibility.
-          <br />
-          <em>Into Possibility.</em>
-        </h2>
-        <p>{campaigns.subtext}</p>
-      </div>
+    <section id="campaigns" className="portfolio-section campaign-section" aria-label="Campaigns">
       <div className="campaign-grid">
         {campaigns.results.map((campaign, index) => (
           <article
