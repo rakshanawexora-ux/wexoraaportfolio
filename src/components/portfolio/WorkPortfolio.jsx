@@ -78,22 +78,45 @@ export default function WorkPortfolio({ projects, application, creatives, campai
   }, [filter]);
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('work-entered');
-            observer.unobserve(entry.target);
+    if (!('IntersectionObserver' in window)) return;
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let observer;
+    const elements = [
+      ...workRef.current.querySelectorAll(
+        '.project-preview, .project-information, .creative, .campaign, .mobile-section, .section-heading',
+      ),
+    ];
+
+    function setupReveals() {
+      observer?.disconnect();
+      if (motion.matches) {
+        elements.forEach((element) => element.classList.remove('reveal-ready'));
+        return;
+      }
+      observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('reveal-visible');
+              observer.unobserve(entry.target);
+            }
           }
-        }
-      },
-      { threshold: 0.08 },
-    );
-    workRef.current
-      .querySelectorAll('.project, .creative, .campaign, .mobile-section')
-      .forEach((item) => observer.observe(item));
-    return () => observer.disconnect();
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -24px 0px' },
+      );
+      for (const element of elements) {
+        if (element.closest('[hidden]') || element.classList.contains('reveal-visible')) continue;
+        element.classList.add('reveal-ready');
+        observer.observe(element);
+      }
+    }
+
+    setupReveals();
+    motion.addEventListener('change', setupReveals);
+    return () => {
+      observer?.disconnect();
+      motion.removeEventListener('change', setupReveals);
+    };
   }, [filter]);
 
   return (
@@ -102,8 +125,9 @@ export default function WorkPortfolio({ projects, application, creatives, campai
         Skip to projects
       </a>
       <Header websiteCount={projects.length} onNavigate={navigate} />
+      <div className="reading-progress" aria-hidden="true" />
       <main>
-        <Introduction />
+        <Introduction projects={projects} onNavigate={navigate} />
         <div id="work" className="work" ref={workRef}>
           <div className="filter-bar">
             <div className="project-filters" role="group" aria-label="Filter projects by type">

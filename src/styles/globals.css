@@ -172,7 +172,7 @@ main {
 
 /* Large typography, then straight into the projects. */
 .intro {
-  padding: 96px 0 50px;
+  padding: 72px 0 44px;
 }
 .eyebrow {
   display: flex;
@@ -226,6 +226,145 @@ h1 em {
   height: 30px;
   transform: rotate(180deg);
   color: var(--accent);
+}
+
+/* A lightweight animated reel, built from our real project screenshots. */
+.hero-reel {
+  margin-top: 38px;
+  padding: 22px 28px 18px;
+  border: 1px solid #dce4d5;
+  border-radius: 16px;
+  background: radial-gradient(ellipse at 50% 40%, #e1ead8, transparent 75%), var(--surface);
+}
+.hero-reel-heading,
+.hero-reel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.hero-reel-heading > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.reel-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.reel-motion {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid #cdd7c9;
+  border-radius: 20px;
+  background: #fafbf8a6;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0;
+}
+.reel-motion:hover {
+  color: var(--ink);
+  background: var(--paper);
+}
+.hero-reel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  padding: 24px 4px 22px;
+}
+.hero-card-track {
+  min-width: 0;
+}
+.hero-project {
+  display: block;
+  padding-block: 8px;
+  border-radius: 9px;
+}
+.hero-project-surface {
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid #d3dccd;
+  border-radius: 9px;
+  box-shadow: 0 12px 28px #202d2710;
+  transition:
+    box-shadow 250ms ease,
+    border-color 250ms ease;
+}
+.hero-project:hover .hero-project-surface {
+  border-color: var(--accent);
+  box-shadow: 0 16px 32px #202d2726;
+}
+.hero-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  padding-inline: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.hero-browser-bar i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #b5c6aa;
+}
+.hero-browser-bar > span {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 7px;
+  letter-spacing: 0.5px;
+}
+.hero-project-surface > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: contain;
+  background: white;
+}
+.hero-project-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+}
+.hero-project-label .arrow-icon {
+  width: 15px;
+  height: 15px;
+  color: var(--accent);
+}
+.hero-reel-footer {
+  padding-top: 8px;
+}
+.hero-reel-footer > span {
+  font-size: 8px;
+}
+.hero-reel-footer > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 34px;
+  font-size: 10px;
+  letter-spacing: 0;
+}
+.hero-reel-footer .arrow-icon {
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg);
+}
+.reading-progress {
+  display: none;
 }
 
 /* Real category filters stay in reach while browsing. */
@@ -968,9 +1107,6 @@ dialog > img {
   .intro {
     animation: work-arrive 550ms ease both;
   }
-  .work-entered {
-    animation: work-arrive 650ms ease both;
-  }
   dialog[open] {
     animation: work-arrive 200ms ease both;
   }
@@ -1367,6 +1503,145 @@ dialog > img {
   .project-preview .gallery button:hover,
   .phone-gallery button:hover,
   .visit:hover .arrow-icon {
+    transform: none;
+  }
+}
+
+/* Reveal images and their stories separately as they enter the viewport. */
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes page-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-project-surface {
+    animation: hero-float 5s ease-in-out infinite;
+    animation-delay: calc(var(--card-order) * -1.4s);
+  }
+  .hero-reel.is-paused .hero-project-surface,
+  .hero-project:hover .hero-project-surface,
+  .hero-project:focus-within .hero-project-surface {
+    animation-play-state: paused;
+  }
+  .reveal-ready {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+      opacity 700ms ease,
+      transform 850ms cubic-bezier(0.2, 0.7, 0.15, 1);
+  }
+  .project-preview.reveal-ready {
+    transform: translateY(36px) scale(0.98);
+  }
+  .project-information.reveal-ready {
+    transition-delay: 110ms;
+  }
+  .creative:nth-child(even).reveal-ready,
+  .campaign:nth-child(even).reveal-ready {
+    transition-delay: 90ms;
+  }
+  .reveal-ready.reveal-visible,
+  .reveal-ready:focus-within {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal-ready:focus-within {
+    transition: none;
+  }
+  @supports (animation-timeline: scroll()) {
+    .reading-progress {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      z-index: 60;
+      pointer-events: none;
+      background: var(--accent);
+      transform-origin: left;
+      animation: page-progress linear both;
+      animation-timeline: scroll(root block);
+    }
+  }
+}
+@media (max-width: 800px) {
+  .hero-reel {
+    padding-inline: 20px;
+  }
+  .hero-reel-grid {
+    gap: 14px;
+  }
+  .hero-project-label {
+    padding: 10px;
+    font-size: 9px;
+  }
+  .hero-browser-bar > span {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 600px) {
+  .hero-reel {
+    margin-top: 26px;
+    padding: 16px 16px 12px;
+    border-radius: 12px;
+  }
+  .hero-reel-heading {
+    gap: 8px;
+    font-size: 7px;
+    letter-spacing: 0.4px;
+  }
+  .reel-motion {
+    font-size: 9px;
+    padding-inline: 8px;
+  }
+  .hero-reel-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    gap: 14px;
+    padding: 18px 4px;
+  }
+  .hero-card-track {
+    flex: 0 0 88%;
+    scroll-snap-align: center;
+  }
+  .hero-project-label {
+    padding: 11px 12px;
+    font-size: 11px;
+  }
+  .hero-reel-footer > span {
+    display: none;
+  }
+  .hero-reel-footer {
+    justify-content: flex-end;
+  }
+  .hero-reel-footer > a {
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reel-motion {
+    display: none;
+  }
+  .reveal-ready {
+    opacity: 1;
     transform: none;
   }
 }
