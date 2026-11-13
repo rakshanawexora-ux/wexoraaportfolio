@@ -31,17 +31,20 @@ export default function CampaignResults({ campaigns }) {
             <div className="campaign-story">
               <h4>{campaign.headline}</h4>
               <p className="campaign-description">{campaign.description}</p>
+              {campaign.images.length > 0 && (
+                <div className="campaign-evidence">
+                  <p className="campaign-kicker">CAMPAIGN RESULTS · CLICK TO ENLARGE</p>
+                  <ImageGallery images={campaign.images} title={campaign.name} />
+                </div>
+              )}
               <ContentDisclosure
                 className="campaign-details"
                 label={
                   campaign.images.length
-                    ? `View ${campaign.name} campaign results`
+                    ? `Read ${campaign.name} campaign details`
                     : 'Explore our social media approach'
                 }
               >
-                {campaign.images.length > 0 && (
-                  <ImageGallery images={campaign.images} title={campaign.name} />
-                )}
                 <ContentBlocks blocks={campaign.content} />
               </ContentDisclosure>
             </div>

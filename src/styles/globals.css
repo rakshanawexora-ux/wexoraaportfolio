@@ -1143,18 +1143,23 @@ summary::-webkit-details-marker {
   flex-wrap: wrap;
   gap: 10px;
 }
-.campaign-details .gallery {
+.campaign-evidence {
+  margin-top: 30px;
+}
+.campaign-evidence > .campaign-kicker {
+  margin-bottom: 14px;
+}
+.campaign-evidence .gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  margin-bottom: 24px;
 }
-.campaign-details .gallery button {
+.campaign-evidence .gallery button {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
 }
-.campaign-details .gallery img {
+.campaign-evidence .gallery img {
   width: 100%;
   height: 240px;
   object-fit: contain;
@@ -1692,7 +1697,7 @@ dialog > img {
   .campaign-description {
     font-size: 15px;
   }
-  .campaign-details .gallery {
+  .campaign-evidence .gallery {
     grid-template-columns: 1fr;
   }
   .disclosure-body {
