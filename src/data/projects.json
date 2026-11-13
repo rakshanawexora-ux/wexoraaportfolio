@@ -270,7 +270,9 @@
     "name": "Vlasy",
     "category": "Beauty & salon",
     "websiteUrl": "https://vlasy-project.onrender.com/",
-    "images": [],
+    "images": [
+      "/images/websites/vlasy-home.png"
+    ],
     "coverTitle": "Your colour. Your look. Vlasy.",
     "coverStyle": "warm",
     "description": [
@@ -289,7 +291,9 @@
     "name": "Tenlyr",
     "category": "Software & technology consulting",
     "websiteUrl": "https://www.tenlyr.com/",
-    "images": [],
+    "images": [
+      "/images/websites/tenlyr-home.png"
+    ],
     "coverTitle": "Keep your software working as you grow.",
     "description": [
       "A professional services website for Tenlyr, presenting its software architecture review offering through clear messaging and a distinctive purple visual identity. The homepage uses an example review report to explain technical risks in plain language, helping visitors understand the service and take the next step toward requesting a review."
@@ -309,7 +313,7 @@
     "category": "Travel CRM & admin dashboard",
     "websiteUrl": "https://exploremunnardashboard.netlify.app/",
     "images": [
-      "/images/websites/exploring-munnar-admin.jpeg"
+      "/images/websites/exploring-munnar-crm-dashboard.png"
     ],
     "description": [
       "A custom CRM and website administration dashboard developed for Exploring Munnar to bring travel operations and website management into one workspace. The dashboard provides an overview of hotel bookings, cab bookings, bike rentals, self-drive car rentals, and itineraries, with dedicated sections for managing users, hotels, bookings, and travel content.",
