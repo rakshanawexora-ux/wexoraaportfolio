@@ -264,5 +264,64 @@
       "Clear journey-planning and contact actions",
       "Consistent visual design for a one-way taxi brand"
     ]
+  },
+  {
+    "id": "vlasy",
+    "name": "Vlasy",
+    "category": "Beauty & salon",
+    "websiteUrl": "https://vlasy-project.onrender.com/",
+    "images": [],
+    "coverTitle": "Your colour. Your look. Vlasy.",
+    "coverStyle": "warm",
+    "description": [
+      "A salon website for Vlasy Unisex Salon, bringing its hair colour and styling services into a polished digital experience. A charcoal-and-gold visual identity, bold photography, and clear navigation introduce the brand, while a prominent appointment call to action helps visitors take the next step."
+    ],
+    "featuresTitle": "Website Highlights:",
+    "features": [
+      "Charcoal-and-gold salon branding",
+      "Hair colour, highlights, and balayage service showcase",
+      "Prominent appointment call to action",
+      "Dedicated services, about, and contact navigation"
+    ]
+  },
+  {
+    "id": "tenlyr",
+    "name": "Tenlyr",
+    "category": "Software & technology consulting",
+    "websiteUrl": "https://www.tenlyr.com/",
+    "images": [],
+    "coverTitle": "Keep your software working as you grow.",
+    "description": [
+      "A professional services website for Tenlyr, presenting its software architecture review offering through clear messaging and a distinctive purple visual identity. The homepage uses an example review report to explain technical risks in plain language, helping visitors understand the service and take the next step toward requesting a review."
+    ],
+    "featuresTitle": "Website Highlights:",
+    "features": [
+      "Clear presentation of software architecture review services",
+      "Example report with prioritized findings",
+      "Services and case study navigation",
+      "Prominent request-a-review call to action",
+      "Bold typography and a purple visual identity"
+    ]
+  },
+  {
+    "id": "exploring-munnar-crm",
+    "name": "Exploring Munnar CRM",
+    "category": "Travel CRM & admin dashboard",
+    "websiteUrl": "https://exploremunnardashboard.netlify.app/",
+    "images": [
+      "/images/websites/exploring-munnar-admin.jpeg"
+    ],
+    "description": [
+      "A custom CRM and website administration dashboard developed for Exploring Munnar to bring travel operations and website management into one workspace. The dashboard provides an overview of hotel bookings, cab bookings, bike rentals, self-drive car rentals, and itineraries, with dedicated sections for managing users, hotels, bookings, and travel content.",
+      "Alongside operational tools, the administration interface includes sections for live information, activities, bus timings, highlights, homepage slides, and reports, helping the team organize its services and maintain the customer-facing website."
+    ],
+    "featuresTitle": "CRM & Dashboard Highlights:",
+    "features": [
+      "Booking overview for hotels, cabs, bike rentals, self-drive cars, and itineraries",
+      "User, hotel, and booking management sections",
+      "Travel activities and itinerary management",
+      "Website content administration for live information, highlights, and homepage slides",
+      "Bus timings and reporting sections"
+    ]
   }
 ]
