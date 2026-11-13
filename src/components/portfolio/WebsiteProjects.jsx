@@ -1,17 +1,22 @@
 import ProjectCard from './ProjectCard';
 import SectionHeading from '../ui/SectionHeading';
 
-export default function WebsiteProjects({ projects }) {
+export default function WebsiteProjects({
+  projects,
+  id = 'websites',
+  title = 'Website projects',
+  numberOffset = 0,
+}) {
   return (
-    <section id="websites" className="website-section">
+    <section id={id} className="website-section">
       <SectionHeading
-        title="Website projects"
+        title={title}
         count={projects.length}
         caption="DESIGNED WITH PURPOSE. BUILT AROUND YOU."
       />
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <ProjectCard key={project.id} project={project} number={index + 1} />
+          <ProjectCard key={project.id} project={project} number={numberOffset + index + 1} />
         ))}
       </div>
     </section>

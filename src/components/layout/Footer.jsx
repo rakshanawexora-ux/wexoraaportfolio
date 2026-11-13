@@ -6,13 +6,21 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-heading">
-        <p>YOUR BUSINESS. ONE TEAM THAT GETS IT.</p>
+        <p>LET’S CREATE SOMETHING MEANINGFUL.</p>
         <div>
-          <h2>
-            Good ideas.
-            <br />
-            <em>Made real.</em>
-          </h2>
+          <div className="footer-copy">
+            <h2>
+              Every brand
+              <br />
+              has a story.
+              <br />
+              <em>We make it digital.</em>
+            </h2>
+            <p className="footer-description">
+              Turning ideas into digital experiences that connect, inspire, and leave a lasting
+              impression.
+            </p>
+          </div>
           <a className="footer-arrow" href="#" aria-label="Back to top">
             <ArrowIcon />
           </a>

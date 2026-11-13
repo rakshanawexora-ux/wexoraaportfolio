@@ -5,6 +5,10 @@
   },
   "navigation": [
     {
+      "href": "#software",
+      "label": "Software"
+    },
+    {
       "href": "#websites",
       "label": "Websites"
     },

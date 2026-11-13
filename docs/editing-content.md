@@ -25,7 +25,8 @@ Open `src/data/projects.json`. Copy `docs/project-template.json` and paste it as
 - `images`: URLs start with `/images/`, not `/public/images/`. The first image is the cover; the others appear below it.
 - `description`: one string per paragraph.
 - `features`: one string per bullet. Use `[]` for no features.
-- Array order controls project order. Counts, numbering, cards, and links update automatically.
+- `type`: set to `"software"` for the Software section; omit it for Website projects.
+- Array order controls project order within each section. Counts, numbering, cards, and links update automatically.
 
 ## 3. Validate and preview
 

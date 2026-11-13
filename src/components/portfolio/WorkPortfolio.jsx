@@ -12,6 +12,7 @@ import { useSmoothScroll } from '../ui/SmoothScrollProvider';
 const filters = [
   { id: 'all', label: 'All projects' },
   { id: 'websites', label: 'Websites' },
+  { id: 'software', label: 'Software' },
   { id: 'mobile', label: 'Mobile app' },
   { id: 'social-media', label: 'Social media' },
   { id: 'campaigns', label: 'Campaigns' },
@@ -21,8 +22,11 @@ export default function WorkPortfolio({ projects, application, creatives, campai
   const [filter, setFilter] = useState('all');
   const workRef = useRef(null);
   const scrollTo = useSmoothScroll();
+  const websites = projects.filter((project) => project.type !== 'software');
+  const software = projects.filter((project) => project.type === 'software');
   const counts = {
-    websites: projects.length,
+    websites: websites.length,
+    software: software.length,
     mobile: 1,
     'social-media': creatives.projects.length,
     campaigns: campaigns.results.length,
@@ -135,7 +139,7 @@ export default function WorkPortfolio({ projects, application, creatives, campai
       <a className="skip-link" href="#work" onClick={(event) => navigate(event, '#work')}>
         Skip to projects
       </a>
-      <Header websiteCount={projects.length} onNavigate={navigate} />
+      <Header websiteCount={websites.length} onNavigate={navigate} />
       <div className="reading-progress" aria-hidden="true" />
       <main>
         <Introduction projects={projects} onNavigate={navigate} />
@@ -161,7 +165,15 @@ export default function WorkPortfolio({ projects, application, creatives, campai
           </div>
           <div id="project-results">
             <div hidden={filter !== 'all' && filter !== 'websites'}>
-              <WebsiteProjects projects={projects} />
+              <WebsiteProjects projects={websites} />
+            </div>
+            <div hidden={filter !== 'all' && filter !== 'software'}>
+              <WebsiteProjects
+                projects={software}
+                id="software"
+                title="Software products"
+                numberOffset={websites.length}
+              />
             </div>
             <div hidden={filter !== 'all' && filter !== 'mobile'}>
               <MobileApplication application={application} number={projects.length + 1} />

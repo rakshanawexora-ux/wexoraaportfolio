@@ -5,6 +5,7 @@ import ArrowIcon from '../ui/ArrowIcon';
 
 export default function ProjectCard({ project, number }) {
   const isDashboard = project.id.endsWith('-crm');
+  const isSoftware = project.type === 'software';
 
   return (
     <article className="project" id={project.id} aria-labelledby={`${project.id}-title`}>
@@ -25,20 +26,24 @@ export default function ProjectCard({ project, number }) {
       </div>
       <div className="project-information">
         <p className="project-services">
-          {isDashboard
-            ? '#CRM SOFTWARE  #ADMIN DASHBOARD'
-            : '#WEBSITE DESIGN  #WEBSITE DEVELOPMENT'}
+          {isSoftware
+            ? '#SAAS PRODUCT  #SOFTWARE DEVELOPMENT'
+            : isDashboard
+              ? '#CRM SOFTWARE  #ADMIN DASHBOARD'
+              : '#WEBSITE DESIGN  #WEBSITE DEVELOPMENT'}
         </p>
         <h3 id={`${project.id}-title`}>{project.name}</h3>
         <p className="project-summary">{project.description[0]}</p>
         <div className="project-tags">
           <span>{project.category}</span>
           <span>
-            {isDashboard
-              ? 'CRM & dashboard'
-              : project.caseStudy
-                ? 'Platform architecture'
-                : 'Design & development'}
+            {isSoftware
+              ? 'SaaS product'
+              : isDashboard
+                ? 'CRM & dashboard'
+                : project.caseStudy
+                  ? 'Platform architecture'
+                  : 'Design & development'}
           </span>
         </div>
         {project.features.length > 0 && (
@@ -58,9 +63,9 @@ export default function ProjectCard({ project, number }) {
               target="_blank"
               rel="noopener noreferrer"
               className="visit"
-              aria-label={`Visit ${project.name} website`}
+              aria-label={`Visit ${project.name} ${isSoftware ? 'product' : 'website'}`}
             >
-              Visit website <ArrowIcon />
+              {isSoftware ? 'Explore product' : 'Visit website'} <ArrowIcon />
             </a>
           )}
           <span className="project-index">PROJECT / {String(number).padStart(2, '0')}</span>
