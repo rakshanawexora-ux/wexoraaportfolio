@@ -1,8 +1,9 @@
 'use client';
 
 import { useRef } from 'react';
+import ArrowIcon from './ArrowIcon';
 
-/** The portfolio's only client component: click any image to enlarge it. */
+/** Open original screenshots in a keyboard-accessible image viewer. */
 export default function ImageGallery({ images, title, mobile = false }) {
   const dialogRef = useRef(null);
   const enlargedImageRef = useRef(null);
@@ -34,7 +35,7 @@ export default function ImageGallery({ images, title, mobile = false }) {
               loading="lazy"
             />
             <span className="zoom" aria-hidden="true">
-              ↗
+              <ArrowIcon />
             </span>
           </button>
         ))}
@@ -45,7 +46,17 @@ export default function ImageGallery({ images, title, mobile = false }) {
           onClick={() => dialogRef.current.close()}
           aria-label="Close image"
         >
-          ✕
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            aria-hidden="true"
+          >
+            <path d="m6 6 12 12M6 18 18 6" />
+          </svg>
         </button>
         <img ref={enlargedImageRef} alt="" />
       </dialog>

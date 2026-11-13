@@ -7,7 +7,7 @@ export default function WebsiteProjects({ projects }) {
       <SectionHeading
         title="Website projects"
         count={projects.length}
-        caption="A FEW THINGS WE’VE BUILT"
+        caption="DESIGNED WITH PURPOSE. BUILT AROUND YOU."
       />
       <div className="projects-grid">
         {projects.map((project, index) => (
