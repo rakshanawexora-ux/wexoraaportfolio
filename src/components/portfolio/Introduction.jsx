@@ -98,21 +98,35 @@ export default function Introduction({ projects, onNavigate }) {
           </div>
         )}
       </div>
-      <div className="hero-message">
-        <aside className="hero-usp" aria-labelledby="hero-usp-title">
-          <p className="hero-usp-label">THE WEXORAA DIFFERENCE</p>
-          <h2 id="hero-usp-title">{hero.uspTitle}</h2>
-          <p>{hero.uspDescription}</p>
-        </aside>
-        <div className="hero-capabilities">
-          <p className="hero-capabilities-label">WHAT WE DO</p>
-          <ul className="hero-services" aria-label="What Wexoraa Infotech does">
-            {hero.services.map((service) => (
-              <li key={service}>{service}</li>
-            ))}
-          </ul>
+      <section className="hero-message wexoraa-difference" aria-labelledby="hero-usp-title">
+        <div className="difference-intro">
+          <div className="hero-usp">
+            <p className="hero-usp-label">{hero.uspEyebrow}</p>
+            <h2 id="hero-usp-title">{hero.uspTitle}</h2>
+          </div>
+          <p className="difference-description">{hero.uspDescription}</p>
         </div>
-      </div>
+        <div className="service-pillars">
+          {hero.servicePillars.map((pillar, index) => (
+            <article
+              className={`service-pillar pillar-${pillar.id}`}
+              key={pillar.id}
+              aria-labelledby={`pillar-${pillar.id}-title`}
+            >
+              <div className="pillar-heading">
+                <span aria-hidden="true">0{index + 1}</span>
+                <h3 id={`pillar-${pillar.id}-title`}>{pillar.title}</h3>
+              </div>
+              <p>{pillar.description}</p>
+              <ul className="hero-services" aria-label={`${pillar.title} services`}>
+                {pillar.services.map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
     </section>
   );
 }
