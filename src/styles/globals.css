@@ -205,8 +205,8 @@ h1 em {
 
 /* Explain the business, then show the work that supports it. */
 .intro h1 {
-  font-size: clamp(52px, 6.4vw, 92px);
-  letter-spacing: -4.5px;
+  font-size: clamp(48px, 5.2vw, 76px);
+  letter-spacing: -3.5px;
 }
 .hero-message {
   display: grid;
@@ -1923,5 +1923,197 @@ summary:focus-visible {
   .footer-bottom > a:not(.brand) {
     min-height: 44px;
     font-size: 12px;
+  }
+}
+
+/* Bring real project imagery alongside the first hero message. */
+.hero-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+}
+.hero-copy {
+  min-width: 0;
+}
+.hero-copy .eyebrow {
+  font-size: 9px;
+  letter-spacing: 1.1px;
+}
+.hero-copy .hero-overview {
+  margin-top: 28px;
+}
+.hero-copy .hero-overview > p {
+  max-width: 48ch;
+}
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 510px;
+  margin-top: 0;
+  padding: 22px;
+  border-radius: 22px;
+  background: radial-gradient(ellipse at 50% 45%, #dce8d0, transparent 75%), var(--surface);
+}
+.hero-visual .hero-reel-heading {
+  position: relative;
+  z-index: 6;
+}
+.hero-visual .hero-reel-grid {
+  position: relative;
+  display: block;
+  flex: 1;
+  min-height: 365px;
+  padding: 0;
+  overflow: visible;
+  scroll-snap-type: none;
+}
+.hero-visual .hero-card-track {
+  position: absolute;
+  width: 84%;
+  top: 22px;
+  left: 1%;
+  z-index: 1;
+  transform: rotate(-5deg);
+}
+.hero-visual .hero-card-track:nth-child(2) {
+  width: 70%;
+  top: auto;
+  bottom: 6px;
+  left: auto;
+  right: -1%;
+  z-index: 2;
+  transform: rotate(4deg);
+}
+.hero-visual .hero-card-track:nth-child(3) {
+  width: 52%;
+  top: auto;
+  bottom: -7px;
+  left: 2%;
+  z-index: 3;
+  transform: rotate(-3deg);
+}
+.hero-visual .hero-card-track:hover,
+.hero-visual .hero-card-track:focus-within {
+  z-index: 5;
+}
+.hero-visual .hero-project-label {
+  padding: 10px 12px;
+  font-size: 11px;
+}
+.hero-visual .hero-reel-footer {
+  position: relative;
+  z-index: 6;
+  padding-top: 20px;
+}
+.hero-visual .hero-reel-footer > span {
+  display: none;
+}
+.hero-visual .hero-reel-footer > a {
+  margin-left: auto;
+}
+.hero-message {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.hero-capabilities-label {
+  margin: 0 0 14px;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  color: var(--muted);
+}
+.hero-capabilities .hero-services {
+  margin-top: 0;
+}
+@media (max-width: 1100px) and (min-width: 1001px) {
+  .hero-top {
+    gap: 32px;
+  }
+  .hero-visual {
+    min-height: 460px;
+    padding: 18px;
+  }
+  .hero-visual .hero-reel-grid {
+    min-height: 315px;
+  }
+  .hero-visual .hero-project-label {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1000px) {
+  .hero-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .intro h1 {
+    font-size: clamp(52px, 7.6vw, 76px);
+  }
+  .hero-copy .hero-overview > p {
+    max-width: 60ch;
+  }
+  .hero-visual {
+    width: 100%;
+    max-width: 640px;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 600px) {
+  .hero-top {
+    gap: 28px;
+  }
+  .intro h1 {
+    font-size: clamp(42px, 10.8vw, 58px);
+    letter-spacing: -2px;
+  }
+  .hero-copy .eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.6px;
+  }
+  .hero-copy .hero-overview {
+    margin-top: 24px;
+  }
+  .hero-visual {
+    min-height: 0;
+    padding: 18px;
+    border-radius: 16px;
+  }
+  .hero-visual .hero-reel-grid {
+    min-height: 280px;
+  }
+  .hero-visual .hero-card-track {
+    width: 88%;
+    left: 0;
+    top: 18px;
+  }
+  .hero-visual .hero-card-track:nth-child(2) {
+    width: 72%;
+    right: 0;
+    bottom: 4px;
+  }
+  .hero-visual .hero-card-track:nth-child(3) {
+    width: 58%;
+    left: 0;
+    bottom: -3px;
+  }
+  .hero-visual .hero-project-label {
+    padding: 8px;
+    font-size: 9px;
+  }
+  .hero-visual .hero-project-label .arrow-icon {
+    width: 12px;
+    height: 12px;
+  }
+  .hero-visual .hero-reel-heading {
+    font-size: 8px;
+  }
+  .hero-visual .hero-reel-footer {
+    padding-top: 12px;
+  }
+  .hero-message {
+    margin-top: 28px;
+    padding-top: 26px;
   }
 }
