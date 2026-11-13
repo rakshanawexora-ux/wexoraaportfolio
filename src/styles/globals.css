@@ -202,32 +202,115 @@ h1 em {
   color: #537842;
   font-style: normal;
 }
-.intro-bottom {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-  margin-top: 30px;
+
+/* Explain the business, then show the work that supports it. */
+.intro h1 {
+  font-size: clamp(52px, 6.4vw, 92px);
+  letter-spacing: -4.5px;
 }
-.intro-bottom p {
-  max-width: 490px;
+.hero-message {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+  margin-top: 32px;
+}
+.hero-overview > p {
+  max-width: 54ch;
   margin: 0;
-  font-size: 15px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.hero-work-link {
+  margin-top: 22px;
+}
+.hero-usp {
+  padding-left: 26px;
+  border-left: 2px solid var(--accent);
+}
+.hero-usp > .hero-usp-label {
+  margin: 0 0 10px;
+  font-size: 10px;
+  letter-spacing: 1.4px;
   color: var(--muted);
 }
-.intro-bottom > span {
+.hero-usp h2 {
+  max-width: 27ch;
+  margin: 0 0 12px;
+  font-size: 25px;
+  line-height: 1.3;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+}
+.hero-usp > p:not(.hero-usp-label) {
+  max-width: 52ch;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.hero-services {
   display: flex;
-  align-items: center;
-  gap: 30px;
-  flex-shrink: 0;
-  font-size: 12px;
-  color: var(--muted);
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
 }
-.intro-arrow {
-  width: 30px;
-  height: 30px;
-  transform: rotate(180deg);
-  color: var(--accent);
+.hero-services li {
+  padding: 7px 12px;
+  border: 1px solid #d8e0d2;
+  border-radius: 20px;
+  background: var(--surface);
+  color: #344b3a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+@media (max-width: 800px) {
+  .intro h1 {
+    font-size: 64px;
+    letter-spacing: -3px;
+  }
+  .hero-message {
+    gap: 30px;
+  }
+  .hero-usp {
+    padding-left: 20px;
+  }
+  .hero-usp h2 {
+    font-size: 22px;
+  }
+  .hero-overview > p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .intro h1 {
+    max-width: none;
+    font-size: clamp(42px, 10.8vw, 58px);
+    letter-spacing: -2px;
+    line-height: 1.1;
+  }
+  .hero-message {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 26px;
+  }
+  .hero-usp {
+    padding-left: 18px;
+  }
+  .hero-usp h2 {
+    font-size: 23px;
+  }
+  .hero-services {
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .hero-services li {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
 }
 
 /* A lightweight animated reel, built from our real project screenshots. */
@@ -1254,19 +1337,6 @@ dialog > img {
   h1 {
     letter-spacing: -3.5px;
   }
-  .intro-bottom {
-    align-items: flex-start;
-    gap: 30px;
-  }
-  .intro-bottom p {
-    font-size: 14px;
-  }
-  .intro-bottom > span {
-    max-width: 170px;
-    flex-shrink: 1;
-    font-size: 11px;
-    gap: 15px;
-  }
   .filter-bar {
     padding-block: 12px;
   }
@@ -1387,24 +1457,6 @@ dialog > img {
     letter-spacing: -2.6px;
     line-height: 1.04;
     max-width: 10ch;
-  }
-  .intro-bottom {
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 24px;
-  }
-  .intro-bottom p {
-    max-width: 35ch;
-    line-height: 1.7;
-  }
-  .intro-bottom > span {
-    max-width: none;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .intro-arrow {
-    width: 26px;
-    height: 26px;
   }
   .filter-bar {
     padding-block: 12px;

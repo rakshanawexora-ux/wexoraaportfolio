@@ -22,12 +22,20 @@
     }
   ],
   "hero": {
-    "eyebrow": "INDEPENDENT TEAM. THOUGHTFUL DIGITAL WORK.",
-    "title": "Good ideas.",
-    "highlight": "Made real.",
-    "description": "A selection of websites, apps, and creative work by Wexoraa Infotech.",
-    "uspTitle": "Your business. One team that gets it.",
-    "uspDescription": "Built in-house. Built around you."
+    "eyebrow": "WEXORAA INFOTECH · DESIGN. BUILD. GROW.",
+    "title": "Your business.",
+    "highlight": "One digital team.",
+    "description": "We’re Wexoraa Infotech. We build websites, custom software and mobile apps, and help brands reach their audience through creative content and digital marketing.",
+    "uspTitle": "One in-house team. Built around your business.",
+    "uspDescription": "Design, development and marketing work together from the start. You work with one team from idea to launch, with solutions shaped around your business.",
+    "services": [
+      "Websites & e-commerce",
+      "Custom software & CRM",
+      "Mobile applications",
+      "Social media creatives",
+      "Digital marketing"
+    ],
+    "ctaLabel": "See what we build"
   },
   "founder": {
     "name": "RAKSHANA . V",

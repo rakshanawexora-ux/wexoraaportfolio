@@ -16,14 +16,33 @@ export default function Introduction({ projects, onNavigate }) {
         <span /> {hero.eyebrow}
       </p>
       <h1 id="work-title">
-        Explore our <em>projects.</em>
+        {hero.title}
+        <br />
+        <em>{hero.highlight}</em>
       </h1>
-      <div className="intro-bottom">
-        <p>{hero.description}</p>
-        <span>
-          {hero.uspDescription} <ArrowIcon className="intro-arrow" />
-        </span>
+      <div className="hero-message">
+        <div className="hero-overview">
+          <p>{hero.description}</p>
+          <a
+            className="visit hero-work-link"
+            href="#work"
+            onClick={(event) => onNavigate?.(event, '#work')}
+          >
+            {hero.ctaLabel}
+            <ArrowIcon />
+          </a>
+        </div>
+        <aside className="hero-usp" aria-labelledby="hero-usp-title">
+          <p className="hero-usp-label">THE WEXORAA DIFFERENCE</p>
+          <h2 id="hero-usp-title">{hero.uspTitle}</h2>
+          <p>{hero.uspDescription}</p>
+        </aside>
       </div>
+      <ul className="hero-services" aria-label="What Wexoraa Infotech does">
+        {hero.services.map((service) => (
+          <li key={service}>{service}</li>
+        ))}
+      </ul>
       {featured.length > 0 && (
         <div className={`hero-reel${paused ? ' is-paused' : ''}`}>
           <div className="hero-reel-heading">
